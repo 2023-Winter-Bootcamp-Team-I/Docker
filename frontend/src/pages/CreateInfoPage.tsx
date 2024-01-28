@@ -2,7 +2,8 @@ import nextButtonImg from '@/assets/images/nextButton.svg';
 import Pencil from '@/assets/image/CreateInfo/Pencil.svg';
 import BackArrow from '@/assets/image/CreateInfo/BackArrow.svg';
 import input1 from '@/assets/image/CreateInfo/input1.png';
-import typing from '@/assets/image/CreateInfo/typing.svg';
+// import typing from '@/assets/image/CreateInfo/typing.svg';
+import { FaRegCheckCircle } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { useWebSocket } from '@/websocket/WebSocketProvider';
 import { useNavigate } from 'react-router-dom';
@@ -71,13 +72,13 @@ function CreateInfoPage() {
   const getButtonStyle = (gender: string) => {
     return `w-1/2 h-[3.5rem] bg-white text-[${
       selectedGender === gender ? '#000000' : '#898989'
-    }] rounded-full text-2xl  font-jua focus:ring ${selectedGender === gender ? 'ring-4 ring-[#464fff]' : ''}`;
+    }] rounded-full text-2xl  font-jua focus:ring ${selectedGender === gender ? 'ring-4 ring-[#447fff]' : ''}`;
   };
 
   const getLanguageButtonStyle = (value: string, selectedLanguage: string) => {
     return `w-1/2 h-[3.5rem] bg-white text-[${
       selectedLanguage === value ? '#000000' : '#898989'
-    }] rounded-full text-2xl  font-jua focus:ring ${selectedLanguage === value ? 'ring-4 ring-[#464fff]' : ''}`;
+    }] rounded-full text-2xl  font-jua focus:ring ${selectedLanguage === value ? 'ring-4 ring-[#447fff]' : ''}`;
   };
 
   //웹소켓 연결
@@ -111,16 +112,18 @@ function CreateInfoPage() {
       <div className="flex gap-20 items-center  ">
         <div className="flex flex-col items-center gap-20 ">
           <img src={input1} className="w-[50%]" />
-          <div className="text-4xl font-jua text-white ">주인공의 정보를 입력해주세요</div>
+          <div className="text-[2.5rem] font-jua text-white ">동화책의 주인공은 누굴까?</div>
         </div>
         {/* <div className="flex w-[1300px] h-screen justify-center items-center"> */}
         <Link to="/library">
           <button>
-            <img src={BackArrow} className="left-[0%] top-[0%] ml-5 mt-5 absolute hover:scale-110" alt="BackArrow" />
+            <img src={BackArrow} className="left-[3%] top-[0%] ml-5 mt-5 absolute hover:scale-110" alt="BackArrow" />
           </button>
         </Link>
-        <div className="flex flex-col w-[60%] items-center justify-center gap-5 -mr-10 bg-[#6b84b8] px-10  pb-12 rounded-2xl z-10">
-          <img src={typing} className="w-[30%]" />
+        <div className="flex flex-col w-[60%] items-center justify-center gap-5 -mr-10 bg-[#f9f9f9] bg-opacity-50 px-10  pb-12 rounded-2xl z-10">
+          <div className=" flex justify-center items-center my-4 text-[#447fff]">
+            <FaRegCheckCircle size="6.5rem" />
+          </div>
           <div className="flex flex-row w-[100%] mb-5  ">
             <div className=" w-[50%] h-[3.5rem] items-center flex flex-row bg-[#659AFF] rounded-full">
               <img src={Pencil} className="w-2/5 mb-10 " alt="Pencil" />
@@ -205,13 +208,13 @@ function CreateInfoPage() {
         </div>
         {/* </div> */}
       </div>
-      <div className="flex flex-col justify-center items-end absolute left-[88%] top-[40%] gap-5 ">
-        <p className="mt-5 text-[#3cb0fd] text-3xl font-jua">{t('createFairytale')}</p>
+      <div className="flex flex-col justify-center items-end absolute left-[88%] top-[45%] gap-5 ">
         <button className="flex" onClick={handleNextButtonClick}>
-          <div className="bg-moveButtonColor rounded-full h-24 w-24 z-20 hover:scale-110">
+          <div className="bg-[#447fff] rounded-full h-24 w-24 z-20 hover:scale-110">
             <img className="w-20 z-20 mx-auto my-0 hover:scale-110" src={nextButtonImg} alt="next_button" />
           </div>
         </button>
+        <p className="mt-2 text-[#ffffff] text-[2rem] font-jua">{t('createFairytale')}</p>
       </div>
     </div>
   );
