@@ -55,7 +55,7 @@ function FrontCoverPage() {
   return (
     <div className="flex flex-col -pt-100">
       <NavBar />
-      <div className="w-screen h-screen bg-mainColor bg-opacity-15 relative z-10">
+      <div className="w-screen h-screen bg-mainColor bg-opacity-15 relative z-10 mt-6">
         <button
           className="absolute top-[45%] left-[2%] bg-moveButtonColor rounded-full h-24 w-24 ml-10 z-20"
           onClick={() => book.current && book.current.pageFlip().flipPrev()}
@@ -65,7 +65,7 @@ function FrontCoverPage() {
         <div className="flex flex-row h-screen mx-auto my-0 w-full px-10">
           {bookData && (
             <HTMLFlipBook
-              width={1200}
+              width={1000}
               height={1180}
               size="stretch"
               minWidth={400}
@@ -79,7 +79,7 @@ function FrontCoverPage() {
               usePortrait={true}
               startZIndex={30}
               autoSize={true}
-              maxShadowOpacity={0.5}
+              maxShadowOpacity={0.3}
               showCover={false}
               mobileScrollSupport={true}
               clickEventForward={true}
@@ -101,7 +101,7 @@ function FrontCoverPage() {
                 </div>
               </div>
 
-              <div className="flex w-full h-[800px] pl-10">
+              <div className="flex w-full h-[730px] pl-10">
                 <FrontCover title={bookData.bookTitle}></FrontCover>
               </div>
 
@@ -111,9 +111,8 @@ function FrontCoverPage() {
                 </div>
               ))}
 
-              <div className="flex w-full h-[800px] pl-10">
+              <div className="flex w-full h-[730px] pl-10">
                 <BackCover></BackCover>
-                <img className="flex mx-auto min-h-full z-20 w-60 mt-36" src={robotImg} alt="robot_character" />
               </div>
             </HTMLFlipBook>
           )}
@@ -133,7 +132,7 @@ export default FrontCoverPage;
 
 const BackCover = React.forwardRef(() => {
   return (
-    <div className="flex h-full pb-6">
+    <div className="flex h-[830px] pb-6">
       <div className="flex bg-bookCoverBack h-full w-full rounded-3xl">
         <div className="flex flex-col bg-bookCoverFront h-full w-full mt-6 z-20 ml-6 -mr-6 rounded-3xl gap-8 items-end ">
           <div className="bg-bookCoverLine h-1/5 w-full mt-[55%]"></div>

@@ -3,7 +3,7 @@ import barcodeImg from '@/assets/images/barcode.svg';
 
 function BackCoverPage() {
   return (
-    <div className="w-screen h-screen bg-mainColor bg-opacity-15 relative z-10">
+    <div className="w-screen h-[600px] bg-mainColor bg-opacity-15 relative z-10">
       <div className="flex flex-row w-[1500px] mx-auto my-0">
         <div className="flex basis-1/2 h-screen justify-center content-center">
           <div className="flex bg-bookCoverBack h-[90%] w-[96%] mt-8 ml-24 rounded-3xl">
