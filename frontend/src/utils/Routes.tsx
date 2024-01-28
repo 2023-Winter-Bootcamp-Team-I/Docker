@@ -15,6 +15,7 @@ import ReadBookPage from '@/pages/ReadBookPage';
 import LoadingPage from '@/pages/LoadingPage';
 import CreationStartPage from '@/pages/CreationStartPage';
 import CreationFinishPage from '@/pages/CreationFinishPage';
+import ServicePage from '@/pages/ServicePage';
 
 const router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
         element: <LoadingPage />,
       },
     ],
+  },
+  {
+    path: '/service',
+    element: <ServicePage />,
   },
 
   // {

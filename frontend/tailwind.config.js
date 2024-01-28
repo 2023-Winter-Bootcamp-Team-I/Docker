@@ -29,6 +29,7 @@ export default {
     backgroundImage: {
       'radial-gradient':
         'radial-gradient(50% 50% at 50% 50%, rgba(244, 244, 244, 0.59) 0%, rgba(119, 165, 255, 0.00) 100%)',
+      'linear-gradient': 'linear-gradient(180deg, #AED1FF 46.5%, #DAEAFF 100%)',
     },
   },
   plugins: [scrollbar({ nocompatible: true })],
