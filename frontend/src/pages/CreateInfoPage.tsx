@@ -109,7 +109,7 @@ function CreateInfoPage() {
 
   return (
     <div className="h-screen w-screen flex justify-center ">
-      <div className="flex gap-20 items-center  ">
+      <div className="flex gap-20 items-center mr-20 ">
         <div className="flex flex-col items-center gap-20 ">
           <img src={input1} className="w-[50%]" />
           <div className="text-[2.5rem] font-jua text-white ">동화책의 주인공은 누굴까?</div>
