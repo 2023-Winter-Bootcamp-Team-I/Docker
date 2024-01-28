@@ -3,10 +3,10 @@ import { bookID, showModal, userLanguage } from '@/states/atom';
 import { useWebSocket } from '@/websocket/WebSocketProvider';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import { motion } from 'framer-motion';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
+import { motion, AnimatePresence } from 'framer-motion';
 
 //웹 소켓 통신으로 스토리 보내고 받고
 interface Story {
@@ -33,6 +33,7 @@ const StoryChoiceModal = () => {
   const selectedLanguage = useRecoilValue(userLanguage);
 
   const navigate = useNavigate();
+  const [isVisible] = useState(true);
 
   if (selectedLanguage == 'en') {
     setIndex(1);
@@ -151,9 +152,20 @@ const StoryChoiceModal = () => {
             src={Robot}
             className="w-[14%] mt-3 z-40"
             animate={{ y: [0, -20, 0], rotate: [0, 0, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            transition={{ duration: 2, repeat: 1, ease: 'easeInOut' }}
           ></motion.img>
-          <div className="font-[HS] text-[4rem] -mt-4 text-[#002875] z-20">{t('nextPageStory')}</div>
+          <AnimatePresence>
+            {isVisible && (
+              <motion.div
+                className="font-[HS] text-[4rem] -mt-4 text-[#002875] z-20"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 3 }}
+              >
+                {t('nextPageStory')}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         {/* 박스 3개 */}
         <div className="flex flex-row justify-center h-[800px] -mt-16 pb-10 z-20">
