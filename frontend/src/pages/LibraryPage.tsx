@@ -123,7 +123,7 @@ const LibraryPage = () => {
                 .slice()
                 .reverse()
                 .map((book) => (
-                  <div className="flex-col w-64 h-[21rem] bg-[#f2f2f2] bg-opacity-65 rounded-2xl mt-4 mb-10 hover:bg-[#fbfbfb] hover:drop-shadow-[3px_3px_0px_rgba(0,0,0,0.35)]">
+                  <div className="flex-col w-64 h-[21rem] bg-[#f2f2f2] bg-opacity-65 rounded-2xl mt-4 mb-10 hover:bg-[#fbfbfb] hover:shadow-[3px_3px_0px_rgba(0,0,0,0.35)]">
                     <div className="w-64 h-64">
                       <button onClick={() => navigateToPage(book.book_id)}>
                         <img src={book.image_url} className="rounded-2xl" />
