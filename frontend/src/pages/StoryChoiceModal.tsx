@@ -158,7 +158,7 @@ const StoryChoiceModal = () => {
             {isVisible && (
               <motion.div
                 className="font-[HS] text-[4rem] -mt-4 text-[#002875] z-20"
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 3 }}
               >
@@ -168,13 +168,23 @@ const StoryChoiceModal = () => {
           </AnimatePresence>
         </div>
         {/* 박스 3개 */}
-        <div className="flex flex-row justify-center h-[800px] -mt-16 pb-10 z-20">
+        <motion.div
+          className="flex flex-row justify-center h-[800px] -mt-16 pb-10 z-20"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 3 }}
+        >
           {/* 큰 박스 */}
           <div className=" w-full h-[75%] pt-20 flex flex-row gap-10 justify-center z-20">
             {/* 왼쪽 박스 */}
             {isshowModal ? (
               <div className="flex w-full h-full">
-                <div className="flex flex-col justify-center items-center w-[80%] h-[90%]">
+                <motion.div
+                  className="flex flex-col justify-center items-center w-[80%] h-[90%]"
+                  initial={{ opacity: 0, y: 100 }} // 초기 상태
+                  animate={{ opacity: 1, y: 0 }} // 애니메이션 적용 상태
+                  transition={{ duration: 0.5 }} // 애니메이션 지속 시간
+                >
                   <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-[Pretty] flex justify-center pt-2 text-white text-4xl">
                     첫번째 이야기
                   </div>
@@ -184,13 +194,15 @@ const StoryChoiceModal = () => {
                     }}
                     className="flex justify-center p-8 font-[Pretty] text-[#01003B] text-3xl cursor-pointer w-[85%] h-full bg-[#ffffff] shadow-[0px_5px_4px_2px_rgba(0,0,0,0.20)] rounded-2xl z-30 border-[6px] border-solid border-[#ACD2FF] hover:border-[#5BA6FF]"
                   >
-                    {/* <div className="font-[Pretty] w-[90%] h-[60%] text-[#01003B] text-3xl">
-                      {storyChoice[index] ? storyChoice[index]['content'] : ''}
-                    </div> */}
                     <p>{storyChoice[index] ? storyChoice[index]['content'] : ''}</p>
                   </div>
-                </div>
-                <div className="flex flex-col justify-center items-center w-[80%] h-[90%]">
+                </motion.div>
+                <motion.div
+                  className="flex flex-col justify-center items-center w-[80%] h-[90%]"
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
                   <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-[Pretty] flex justify-center pt-2 text-white text-4xl">
                     두번째 이야기
                   </div>
@@ -204,13 +216,13 @@ const StoryChoiceModal = () => {
                       {storyChoice[index + 2] ? storyChoice[index + 2]['content'] : ''}
                     </span>
                   </div>
-                </div>
+                </motion.div>
               </div>
             ) : (
               <div></div>
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
