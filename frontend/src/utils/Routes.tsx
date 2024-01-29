@@ -16,6 +16,7 @@ import LoadingPage from '@/pages/LoadingPage';
 import CreationStartPage from '@/pages/CreationStartPage';
 import CreationFinishPage from '@/pages/CreationFinishPage';
 import ServicePage from '@/pages/ServicePage';
+import SliderPage from '@/pages/SliderPage';
 
 const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
   {
     path: '/service',
     element: <ServicePage />,
+  },
+  {
+    path: '/slide',
+    element: <SliderPage />,
   },
 
   // {
