@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import letterImg from '@/assets/images/letter.svg';
-import star from '@/assets/images/star.svg';
-import Close from '@/assets/images/Close.svg';
+import pencil from '@/assets/images/pencil.svg';
+
 import { sendEmail } from '@/api/email';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -54,60 +54,44 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="flex justify-center text-center md:items-center md:p-0 w-full md:h-10">
-            <div className="relative rounded-md shadow-[0_8px_20px_-8px_rgba(0,0,0,0.2)] transition-all my-8 w-2/3 md:w-2/5">
-              <div className="flex flex-col md:flex-row h-[65vh]">
-                <div className="flex flex-col md:flex-col bg-loginBlue md:basis-1/3  ">
-                  <div className="flex basis-2/3 md:justify-center items-center justify-start">
-                    <img className="mx-auto min-h-full mt-8 md:w-full w-1/3" src={star} alt="star_character" />
-                  </div>
-                  <div className="flex basis-1/3 font-dongle text-white xl:text-8xl  text-6xl md:justify-center md:align-bottom  justify-center">
-                    북그북그
-                  </div>
+          <div className="w-[50%] h-[60%] bg-radial-gradient z-10 flex flex-col justify-center items-center">
+            <div className="bg-white mb-12 bg-opacity-30 mt-16 w-[55rem] h-[16rem] rounded-3xl flex flex-col">
+              <div className="flex flex-col justify-center items-center gap-4 -ml-8">
+                <div className="flex justify-center items-center gap-4 -ml-8">
+                  <img src={pencil} className="flex -mt-8 mb-12 scale-150" alt="연필 이미지" />
+                  <p className="font-jua text-[#659AFF] text-[2.7rem]">너의 동화책을 공유해봐!</p>
                 </div>
-                <div className="flex flex-col bg-mainColor md:basis-2/3 basis-full h-full justify-center">
-                  <button onClick={closeModal}>
+                <div className="flex flex-col justify-center">
+                  <div className="flex justify-center">
                     <img
-                      className="xl:left-[90%] md:left-[85%] left-[84%] mr-10 top-[5%] z-20 absolute hover:scale-110"
-                      src={Close}
-                      alt="close_button"
+                      className="flex mx-auto min-h-full w-10  opacity-50 -mr-16 ml-10"
+                      src={letterImg}
+                      alt="letter_image"
                     />
-                  </button>
-                  <div className="flex text-white font-jua px-3 xl:text-3xl md:text-xl text-3xl  justify-center mt-10 mb-[7vh]">
-                    너의 동화책을 공유해봐!
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="이메일을 입력해주세요"
+                      required
+                      value={email}
+                      onChange={handleEmailChange}
+                      className="block w-[100%] h-[4.2rem] text-base  rounded-full px-[8rem] py-[18px] border-2 border-shadowGray focus:outline-signupButtonBlue"
+                    />
                   </div>
-                  <div className="flex flex-col justify-center">
-                    <div className="flex justify-center">
-                      <img
-                        className="flex mx-auto min-h-full md:w-8 w-7 opacity-50 -mr-16 ml-10"
-                        src={letterImg}
-                        alt="letter_image"
-                      />
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="이메일을 입력해주세요"
-                        required
-                        value={email}
-                        onChange={handleEmailChange}
-                        className="block md:w-[80%] w-[70%] md:h-[3.2rem] h-[3.2rem] text-base  rounded-full px-20 py-[18px] border-2 border-shadowGray focus:outline-signupButtonBlue"
-                      />
-                    </div>
-                    <div className="flex mb-[7vh] justify-center"></div>
-                    <div className="flex flex-row gap-2 ml-2 justify-center">
-                      <Link to="/library">
-                        <button
-                          onClick={() => {
-                            handleShareButtonClick();
-                            closeModal();
-                          }}
-                          className="md:w-[9.5rem] w-[7.5rem]  md:h-[3.2rem] h-[2.2rem] mb-10  md:text-[1.4rem] text-[1.0rem]  font-jua rounded-2xl bg-loginBlue md:py-3.5 py-1 text text-3xl leading-7 text-white ml-2 hover:scale-110"
-                        >
-                          공유하기
-                        </button>
-                      </Link>
-                    </div>
+                  <div className="flex mb-[7vh] justify-center"></div>
+                  <div className="flex flex-row gap-2 ml-2 justify-center">
+                    <Link to="/library">
+                      <button
+                        onClick={() => {
+                          handleShareButtonClick();
+                          closeModal();
+                        }}
+                        className="w-[15rem] h-[4.5rem] text-[#EEEEEE] bg-[#659AFF] pt-2 text-[2rem] rounded-3xl border-[#5483DC] border-b-8 border-r-4 hover:bg-[#508dff]"
+                      >
+                        공유하기
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
