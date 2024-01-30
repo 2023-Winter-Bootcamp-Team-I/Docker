@@ -198,10 +198,10 @@ function CreateInfoPage() {
                 className="w-[100%]  font-jua text-3xl ml-1"
                 onChange={(e) => handleChange('fairyTale', e.target.value)}
               >
-                <option value="snowWhite">{t('snowWhite')}</option>
-                <option value="threeLittlePigs">{t('threeLittlePigs')}</option>
-                <option value="cinderella">{t('cinderella')}</option>
-                <option value="heungbuNolbu">{t('heungbuNolbu')}</option>
+                <option value="백설공주">{t('snowWhite')}</option>
+                <option value="아기 돼지 삼형제">{t('threeLittlePigs')}</option>
+                <option value="신데렐라">{t('cinderella')}</option>
+                <option value="흥부와 놀부">{t('heungbuNolbu')}</option>
               </select>
             </div>
           </div>
