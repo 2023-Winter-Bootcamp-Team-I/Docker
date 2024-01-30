@@ -109,7 +109,7 @@ const StoryChoiceModal = () => {
         setStoryChoice((prevArr) => {
           const lastItem = prevArr[prevArr.length - 1]; //배열의 마지막 요소
 
-          if (msg === '1' || msg === '2') {
+          if (msg === '@' || msg === '#') {
             // 다른언어 또는 다른 스토리 시작
             return [...prevArr, { language: msg, content: '' }];
           } else if (lastItem) {
