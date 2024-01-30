@@ -1,6 +1,6 @@
-version: '3'
+version: '3' # 파일 규격 버전
 
-services:
+services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
   rabbitmq:
     image: "rabbitmq:3-management"
     ports:
@@ -12,7 +12,7 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: production_db  # 배포용 데이터베이스 이름
+      MYSQL_DATABASE: test
     ports:
       - "3306:3306"
     healthcheck:
@@ -22,9 +22,14 @@ services:
       timeout: 5s
 
   web:
-    image: your-backend-image:latest  # 여기서 "your-backend-image"는 배포용 이미지 이름
+    build: ./backend
+    depends_on:
+      - db
+      - rabbitmq
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend/:/app/
     restart: always
     environment:
       WAIT_HOSTS: db:3306, rabbitmq:5672
@@ -32,25 +37,40 @@ services:
       - "8000"
 
   celery_worker:
-    image: your-backend-image:latest  # 동일한 이미지를 사용하거나 필요에 따라 다른 이미지 사용
+    build: ./backend
     command: celery -A backend worker --loglevel=info
+    volumes:
+      - ./backend/:/app/
     depends_on:
       - web
       - rabbitmq
     restart: always
 
   celery_beat:
-    image: your-backend-image:latest  # 동일한 이미지를 사용하거나 필요에 따라 다른 이미지 사용
+    build: ./backend
     command: celery -A backend beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes:
+      - ./backend/:/app/
     depends_on:
       - web
       - rabbitmq
     restart: always
 
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/:/frontend
+      - build_folder:/frontend/dist
+      - ./frontend/node_modules/:/frontend/node_modules
+    tty: true
+
   prometheus:
     image: prom/prometheus
     volumes:
-      - ./prometheus:/etc/prometheus
+      - ./backend/prometheus:/app/etc/prometheus
     ports:
       - "9090:9090"
 
