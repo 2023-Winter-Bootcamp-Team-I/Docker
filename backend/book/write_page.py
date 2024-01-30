@@ -159,52 +159,26 @@ class WritePage(WebsocketConsumer):
         return user_info
 
     def generate_start_gpt_responses(self, user_info):
-        # "role": "system",
-        # "content": f"당신은 동화 작가 역할을 해주었으면 합니다."
-        # f"<초기 정보>"
-        # f"주인공 이름: {user_info['userName']}"
-        # f"주인공 성별: {user_info['gender']}"
-        # f"대상 연령: {user_info['age']}"
-        # f"원작 동화: {user_info['fairyTale']}"
-        # f"<초기 정보 끝>"
-        # f"<초기 정보>를 기반으로, 저에게 두 가지의 서로 다른 이야기의 초반부를 한 문장씩 제시해주세요."
-        # f"두 가지의 이야기 중 제가 하나의 이야기를 선택하기 전 까지 기다려주세요."
-        # f"제가 선택을 한 후 제가 선택한 이야기에 이어서 저에게 두 가지의 서로 다른 이야기를 한 문장씩 제시해주세요."
-        # f"문장마다 영어로도 번역 해주세요."
-        # f"서로 다른 이야기지만, <초기 정보>를 기반으로 해야하는 것은 같습니다."
-        # f"두 문장 이내로 대답해주세요."
-        # f"아래와 같은 양식 대로 '@'뒤에 바로 문장이 오도록 부탁드립니다."
-            self.conversation = [
-                {
-                    "role": "system",
-                    "content": f"You are asked to take on the role of a fairy tale writer."
-                               f"<Initial Information> "
-                               f"Main character's name:{user_info['userName']}, Main character's gender:{user_info['gender']}, Target age group:{user_info['age']}, Original fairy tale:{user_info['fairyTale']} "
-                               f"<End of Initial Information>"
-                               f"Based on the <Initial Information>, please present me with the beginnings of two different stories, each in one sentence. Wait for me to choose one of the stories before continuing. Once I have made my choice, continue with the story I selected by presenting me with two different story progressions, each in one sentence. Please also translate each sentence into English. Although the stories should be different, they must be based on the <Initial Information>. Please answer within two sentences."
-                               f"Please replace the existing protagonist with {user_info['userName']} of the <Initial Information>."
-                               f"Please follow the format where the sentence comes right after '@' as below."
-                               f"@korean"
-                               f"@english"
-                               f"#korean"
-                               f"#english"
-                }
-            ]
+        self.conversation = [
+            {
+                "role": "system",
+                "content": f"You are asked to take on the role of a fairy tale writer."
+                           f"<Initial Information> "
+                           f"Main character's name:{user_info['userName']}, Main character's gender:{user_info['gender']}, Target age group:{user_info['age']}, Original fairy tale:{user_info['fairyTale']} "
+                           f"<End of Initial Information>"
+                           f"Based on the <Initial Information>, please present me with the beginnings of two different stories, each in one sentence. Wait for me to choose one of the stories before continuing. Once I have made my choice, continue with the story I selected by presenting me with two different story progressions, each in one sentence. Please also translate each sentence into English. Although the stories should be different, they must be based on the <Initial Information>. Please answer within two sentences.When the sentence is in Korean, please use formal language. 예시) '~했어요.'"
+                           f"Please replace the existing protagonist with {user_info['userName']} of the <Initial Information>."
+                           f"Please follow the format where the sentence comes right after '@' or '#' as below."
+                           f"@korean"
+                           f"@english"
+                           f"#korean"
+                           f"#english"
+            }
+        ]
 
 
 
     def generate_ing_gpt_responses(self, choice):
-        # # 지피티씨 호출해서 만들고 반환하기. -> 내가 선택한 이야기로 진행해주고 계속 이어서 두가지로 해줘
-        # "role": "system",
-        # "content": f"당신은 동화 작가 역할을 해주었으면 합니다."
-        # f"<이전 이야기 정보>"
-        # f"{self.book_content}"
-        # f"<이전 이야기 끝>"
-        # f"<이전 이야기>에 이어지는 내용의 두 가지의 서로 다른 이야기를 한 문장씩 제시해주세요."
-        # f"두 가지의 이야기 중 제가 하나의 이야기를 선택하기 전 까지 기다려주세요."
-        # f"제가 선택을 한 후 제가 선택한 이야기에 이어서 저에게 두 가지의 서로 다른 이야기를 한 문장씩 제시해주세요."
-        # f"문장마다 영어로도 번역 해주세요."
-        # f"서로 다른 이야기지만, <이전 이야기 정보>를 기반으로 해야하는 것은 같습니다."
         self.conversation = [
             {
                 "role": "system",
@@ -212,8 +186,9 @@ class WritePage(WebsocketConsumer):
                            f"<Previous Story Information>"
                            f"{self.book_content}"
                            f"<End of Previous Story>"
-                           f"Based on the <Previous Story>, please present me with the beginnings of two different stories, each in one sentence. Wait for me to choose one of the stories before continuing. After I make my choice, continue with the story I selected by presenting me with two different continuations, each in one sentence. Please also translate each sentence into English. Although the stories should be different, they must be based on the <Previous Story Information>."
-                           f"Please follow the format where the sentence comes right after '@' as below."
+                           f"Based on the <Previous Story Information>, please present me with the beginnings of two different stories, each in one sentence. Wait for me to choose one of the stories before continuing. After I make my choice, continue with the story I selected by presenting me with two different continuations, each in one sentence. Please also translate each sentence into English. Although the stories should be different, they must be based on the <Previous Story Information>.When the sentence is in Korean, please use formal language. 예시) '~했어요.'"
+                           f"Please use the same language as in the <Previous Story Information>."
+                           f"Please follow the format where the sentence comes right after '@' or '#' as below."
                            f"@korean"
                            f"@english"
                            f"#korean"
@@ -222,20 +197,16 @@ class WritePage(WebsocketConsumer):
         ]
 
     def generate_last_ing_gpt_responses(self, choice):
-        # # 지피티씨 호출해서 만들고 반환하기. -> 내가 선택한 이야기로 이야기 마무리 엔딩 내줘
-        # "role": "system",
-        # "content": f"<이전 이야기 정보>"
-        # f"{self.book_content}"
-        # f"<이전 이야기 끝>"
-        # f"<이전 이야기>에 이어지는 하나의 내용으로 동화 이야기를 결말까지 써주세요."
         self.conversation = [
             {
                 "role": "system",
                 "content": f"<Previous Story Information>"
                            f"{self.book_content}"
                            f"<End of Previous Story>"
-                           f"Please write a fairy tale story to its conclusion, continuing from the <Previous Story> as a single narrative."
-                           f"Please follow the format where the sentence comes right after '@' as below."
+                           f"Please write a fairy tale story to its conclusion, continuing from the <Previous Story Information> as a single narrative.When the sentence is in Korean, please use formal language. 예시) '~했어요.'"
+                           f"Please finish with two endings caused by the <Previous Story Information>."
+                           f"Please use the same language as in the <Previous Story Information>."
+                           f"Please follow the format where the sentence comes right after '@' or '#' as below."
                            f"@korean"
                            f"@english"
             },

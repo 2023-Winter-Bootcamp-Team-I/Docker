@@ -38,6 +38,7 @@ i18n.use(initReactI18next).init({
         aiFairytale: '',
         login: 'Login',
         signup: 'Signup',
+        share: 'Share',
       },
     },
     ko: {
@@ -72,6 +73,7 @@ i18n.use(initReactI18next).init({
         aiFairytale: 'AI와 함께 만드는 우리 아이 동화책',
         login: '로그인',
         signup: '회원가입',
+        share: '공유하기',
       },
     },
   },
