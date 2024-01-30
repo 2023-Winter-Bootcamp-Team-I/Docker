@@ -36,6 +36,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
   };
 
   useEffect(() => {
+    console.log(bookId);
     document.body.style.overflow = 'hidden';
     setIsModalOpen(true);
     return () => {
@@ -48,7 +49,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
     <AnimatePresence>
       {isModalOpen && (
         <motion.div
-          className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white bg-opacity-20"
+          className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white bg-opacity-20 z-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
