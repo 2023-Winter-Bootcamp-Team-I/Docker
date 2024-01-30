@@ -10,6 +10,28 @@ export default {
         dongle: ['Dongle', 'sans-serif'],
         // kcc: ['KCC', 'sans-serif'],
       },
+      keyframes: {
+        slider: {
+          '0%': {
+            transform: 'translateX(0px)',
+          },
+          '100%': {
+            transform: 'translateX(-1855px)',
+          },
+        },
+        sliderEnd: {
+          '100%': {
+            transform: 'translateX(0px)',
+          },
+          '0%': {
+            transform: 'translateX(-1855px)',
+          },
+        },
+      },
+      animation: {
+        slider: 'slider 10s linear infinite both',
+        sliderEnd: 'slider 5s linear infinite',
+      },
     },
     colors: {
       mainColor: '#AED1FF', // 메인 백그라운드 컬러
@@ -29,6 +51,7 @@ export default {
     backgroundImage: {
       'radial-gradient':
         'radial-gradient(50% 50% at 50% 50%, rgba(244, 244, 244, 0.59) 0%, rgba(119, 165, 255, 0.00) 100%)',
+      'linear-gradient': 'linear-gradient(180deg, #AED1FF 46.5%, #DAEAFF 100%)',
     },
   },
   plugins: [scrollbar({ nocompatible: true })],
