@@ -105,13 +105,60 @@ a {
   src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
 }
 
-@keyframes imgslide {
+
+@keyframes infiniteAnimation1 {
   0% {
-    /* transform: translate(0, 0); */
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    /* transform: translate(0, -30%); */
-    transform: translateX(-116%);
+      transform: translateX(-83%);
   }
 }
+
+@keyframes infiniteAnimation2 {
+  0% {
+      transform: translateX(103%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+}
+
+/* .scroll {
+  position: relative;
+  display: flex;
+  width: 700px;
+  overflow: hidden;
+}
+
+.scroll div {
+  white-space: nowrap;
+  animation: scroll var(--time) linear infinite;
+  animation-delay: calc(var(--time)*-1);
+
+}
+
+.scroll div:nth-child(2) {
+  animation: scroll2 var(--time) linear infinite;
+  animation-delay: calc(var(--time)/-2);
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-200%);
+  }
+} */
