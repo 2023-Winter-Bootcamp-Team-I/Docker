@@ -67,7 +67,7 @@ i18n.use(initReactI18next).init({
         completeStory: '의 주인공이 되어 이야기를 완성시켜봐!',
         nextPageStory: '다음은 어떤 장면이 펼쳐질까?',
         loadingPage: '책을 만들고 있어요!',
-        bookguBookgu: '북그북그',
+        bookg: '북그북그',
         whatIfMain: '우리 아이가 동화책 주인공이라면?',
         aiFairytale: 'AI와 함께 만드는 우리 아이 동화책',
         login: '로그인',

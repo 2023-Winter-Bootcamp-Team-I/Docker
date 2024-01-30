@@ -15,6 +15,7 @@ import ReadBookPage from '@/pages/ReadBookPage';
 import LoadingPage from '@/pages/LoadingPage';
 import CreationStartPage from '@/pages/CreationStartPage';
 import CreationFinishPage from '@/pages/CreationFinishPage';
+import AboutUsPage from '@/pages/AboutUsPage';
 
 const router = createBrowserRouter([
   {
@@ -96,7 +97,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-
+  {
+    path: '/aboutus',
+    element: <AboutUsPage />,
+  },
   // {
   //     path: "*",
   //     element: <NotfoundPage />,
