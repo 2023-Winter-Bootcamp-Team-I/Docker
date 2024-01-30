@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import { userLanguage } from '@/states/atom';
 import i18n from '@/i18n';
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface CreateTitleModalProps {
   title: string;
@@ -50,7 +51,12 @@ const CreateTitleModal: React.FC<CreateTitleModalProps> = ({ title }) => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center w-screen h-screen bg-[#A9C6FF] bg-opacity-70 relative z-10">
+    <motion.div
+      className="flex justify-center items-center w-screen h-screen bg-[#A9C6FF] bg-opacity-70 relative z-10"
+      initial={{ opacity: 0, y: 0 }} // 초기 상태
+      animate={{ opacity: 1, y: 0 }} // 애니메이션 적용 상태
+      transition={{ duration: 1.5 }}
+    >
       <div className="w-[50%] h-[60%] bg-radial-gradient z-10 flex flex-col justify-center items-center">
         <div className="bg-white mb-12 bg-opacity-30 mt-16 w-[55rem] h-[16rem] rounded-3xl flex flex-col">
           <div className="flex justify-center items-center gap-4 -ml-8">
@@ -78,7 +84,7 @@ const CreateTitleModal: React.FC<CreateTitleModalProps> = ({ title }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
