@@ -23,7 +23,8 @@ def generate_dalle_image_async(image_uuid, enContent):
             prompt=f"{enContent}"
                    f" Please draw the sentence in a cute art 2d style."
                    f"Bright color tones, cartoonish characters, clear outlines."
-                   f"Please make sure there is no text in the picture.",
+                   f"Just draw a picture, please."
+                   f"Please draw a picture suitable for a young child to see.",
             n=1,
             size="1024x1024"
         )
