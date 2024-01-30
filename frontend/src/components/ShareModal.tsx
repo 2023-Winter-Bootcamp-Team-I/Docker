@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import letterImg from '@/assets/images/letter.svg';
 import letter2 from '@/assets/images/letter2.svg';
-
+import Close from '@/assets/images/Close.svg';
 import { sendEmail } from '@/api/email';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -48,24 +48,22 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
     <AnimatePresence>
       {isModalOpen && (
         <motion.div
-          className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white bg-opacity-20"
+          className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white bg-opacity-30"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="bg-signupButtonBlue mb-12 bg-opacity-30 mt-16 w-[55rem] h-[25rem] rounded-3xl flex flex-col z-20 justify-between">
-            <div className="flex flex-col justify-center items-center -ml-8">
-              <div className="flex justify-center items-center gap-4 -ml-28">
-                <img src={letter2} className="flex -mt-8 mb-12 mr-10 scale-150" />
-                <p className="font-jua mt-12 text-white text-[2.7rem]">너의 동화책을 공유해봐!</p>
+          <button onClick={closeModal}>
+            <img className="flex left-[69%] top-[30%] absolute z-40 " src={Close} alt="close_button" />
+          </button>
+          <div className="bg-[#b0c9ff] mb-  w-[55rem] h-[25rem] rounded-xl flex flex-col z-20 justify-between">
+            <div className="flex flex-col justify-center items-center ">
+              <div className="flex  gap-4 -ml-28">
+                <img src={letter2} className="flex -mb-20  mr-10 scale-110" />
+                <p className="font-jua mt-20 text-white text-[2.7rem]">너의 동화책을 공유해봐!</p>
               </div>
-              <div className="flex justify-center mt-16 ">
-                <img
-                  className="flex mx-auto min-h-full w-10  opacity-50 -mr-16 ml-10"
-                  src={letterImg}
-                  alt="letter_image"
-                />
+              <div className="flex mt-16 ">
                 <input
                   id="email"
                   name="email"
@@ -74,7 +72,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
                   required
                   value={email}
                   onChange={handleEmailChange}
-                  className="block w-[100%] h-[4.2rem] text-lg  rounded-full px-[8rem] py-[18px] border-2 border-shadowGray focus:outline-signupButtonBlue"
+                  className="w-[30rem] h-[4.2rem] text-xl  rounded-full px-6 border-2 border-shadowGray focus:outline-signupButtonBlue"
                 />
               </div>
               <div className="flex mb-[13vh] justify-center"></div>
@@ -85,7 +83,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
                       handleShareButtonClick();
                       closeModal();
                     }}
-                    className="w-[15rem] h-[4.5rem] text-[#EEEEEE] bg-[#659AFF] pt-2 text-[2rem] rounded-3xl border-[#5483DC] border-b-8 border-r-4 hover:bg-[#508dff] font-jua"
+                    className="w-[15rem] h-[4.5rem] text-[#EEEEEE] bg-[#6c9aff] pt-2 text-[2rem] rounded-3xl border-[#6091fd] border-b-8 border-r-4 hover:bg-[#447fff] font-jua hover:border-[#296dff]"
                   >
                     공유하기
                   </button>
