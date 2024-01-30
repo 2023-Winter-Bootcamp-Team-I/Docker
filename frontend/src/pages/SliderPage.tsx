@@ -40,10 +40,10 @@ const SliderPage = () => {
     <div className="flex flex-col w-screen h-screen bg-[#DAEAFF]">
       <div className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[jua] mb-12">
         <p className="mb-3">
-          동화책을 완성시키는
+          북그북그에서 만나는
           <br />
         </p>
-        <p>그림 생성 AI</p>
+        <p>다양한 그림</p>
       </div>
       <div className="flex justify-center items-center">
         <div className="flex overflow-hidden mb-5 w-full">
