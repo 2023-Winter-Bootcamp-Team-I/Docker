@@ -8,6 +8,7 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { userLanguage, userIDState } from '@/states/atom';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
+// import ServicePage from './ServicePage';
 
 const MainPage = () => {
   const [showModal, setShowModal] = useState(false);
