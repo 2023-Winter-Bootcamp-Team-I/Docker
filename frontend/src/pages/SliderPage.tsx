@@ -1,40 +1,20 @@
 import book1 from '@/assets/images/Service/book.jpeg';
 import book2 from '@/assets/images/Service/book2.jpeg';
 import '@/index.css';
-// import Swiper from 'swiper';
-// import 'swiper/css/bundle';
-// const scrollBox = {
-//   position: 'relative',
-//   display: 'flex',
-//   // width: '700px',
-//   overflow: 'hidden',
-// };
-const SliderPage = () => {
-  // const scroll1 = {
-  //   whiteSpace: 'nowrap',
-  //   animation: 'scroll 20s linear infinite',
-  //   animationDelay: '-20s',
-  // };
 
-  // const scroll2 = {
-  //   animation: 'scroll2 20s linear infinite',
-  //   animationDelay: `calc(20s / -2)`,
-  // };
+const SliderPage = () => {
   const imgslide1 = {
-    // animation: 'infiniteAnimation1 10s linear infinite',
-    animation: 'infiniteAnimation1 10s infinite linear',
+    animation: 'infiniteAnimation1 80s infinite linear',
   };
-  // const imgslide2 = {
-  //   animation: 'infiniteAnimation2 10s linear infinite ',
-  // };
-  // const swiper = new Swiper('.swiper', {
-  //   // Swiper 옵션 설정
-  //   loop: true,
-  //   autoplay: true,
-  //   speed: 500,
-  //   slidesPerView: 'auto',
-  // });
-  // const books = [book2, book2, book1, book1, book1, book1, book2, book2];
+  const imgslide2 = {
+    animation: 'infiniteAnimation2 80s linear infinite ',
+  };
+  const imgslide3 = {
+    animation: 'infiniteAnimation3 80s infinite linear',
+  };
+  const imgslide4 = {
+    animation: 'infiniteAnimation4 80s linear infinite ',
+  };
 
   return (
     <div className="flex flex-col w-screen h-screen bg-[#DAEAFF]">
@@ -46,73 +26,60 @@ const SliderPage = () => {
         <p>다양한 그림</p>
       </div>
       <div className="flex justify-center items-center">
-        <div className="flex overflow-hidden mb-5 w-full">
-          <div className="flex flex-row flex-nowrap mb-5 w-full gap-8" style={imgslide1}>
+        <div className="flex overflow-hidden relative mb-5 w-full h-[200px]">
+          <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide1}>
             <img className="w-48" src={book2} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
+            <img className="w-48" src={book2} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book1} />
+
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book2} />
+          </div>
+          <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide2}>
+            <img className="w-48" src={book2} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
+
             <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
+            <img className="w-48" src={book2} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book2} />
           </div>
-          {/* <div className="flex flex-row flex-nowrap mb-5 w-full h-[130px] gap-8" style={imgslide2}>
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book2} />
-          </div> */}
         </div>
-        {/* <div className="flex w-[1636px] bg-white overflow-hidden">
-          <div className="flex flex-row flex-nowrap mb-5 w-[100%] h-100px gap-8 infiniteAnimation1" style={imgslide1}>
+      </div>
+      <div className="flex justify-center items-center mt-4">
+        <div className="flex overflow-hidden relative mb-5 w-full h-[200px]">
+          <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide3}>
             <img className="w-48" src={book2} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book1} />
             <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book1} />
             <img className="w-48" src={book2} />
           </div>
-          <div className="flex flex-row flex-nowrap mb-5 w-full h-100px gap-8 -ml-7">
-            <img className="w-48swiper" src={book1} />
-            <img className="w-48swiper" src={book1} />
-            <img className="w-48swiper" src={book1} />
-            <img className="w-48swiper" src={book1} />
-            <img className="w-48swiper" src={book1} />
-            <img className="w-48swiper" src={book1} />
-            <img className="w-48swiper" src={book1} />
-            <img className="w-48swiper" src={book2} />
-            <img className="w-48swiper" src={book2} />
+          <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide4}>
+            <img className="w-48" src={book2} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book2} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book1} />
+            <img className="w-48" src={book2} />
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
