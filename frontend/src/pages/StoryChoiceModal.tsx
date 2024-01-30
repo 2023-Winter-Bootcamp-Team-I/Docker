@@ -59,7 +59,7 @@ const StoryChoiceModal = () => {
       //소켓 데이터 전송
       socket?.send(
         JSON.stringify({
-          type: pageNum === 4 ? 'end' : 'ing',
+          type: pageNum === 6 ? 'end' : 'ing',
           pageCnt: pageNum,
           choice: boxNum,
           koContent: storyChoice[choice],
@@ -77,7 +77,7 @@ const StoryChoiceModal = () => {
       setShowModal(false);
       // setSocketSend(false);
 
-      if (bookId != 0 && pageNum === 3) {
+      if (bookId != 0 && pageNum === 5) {
         //unmounting이 되고 socket()실행이 돼서 pagenum -1
         console.log('socket closed');
         //소켓종료
@@ -92,7 +92,7 @@ const StoryChoiceModal = () => {
     }, 500);
 
     //socket 연결, pagenum<6이면
-    if (socket && pageNum < 4) {
+    if (socket && pageNum < 6) {
       //서버 응답 받기
       socket.onmessage = (event) => {
         // Buffer를 문자열로 변환
@@ -109,7 +109,7 @@ const StoryChoiceModal = () => {
         setStoryChoice((prevArr) => {
           const lastItem = prevArr[prevArr.length - 1]; //배열의 마지막 요소
 
-          if (msg === '1' || msg === '2') {
+          if (msg === '@' || msg === '#') {
             // 다른언어 또는 다른 스토리 시작
             return [...prevArr, { language: msg, content: '' }];
           } else if (lastItem) {
@@ -123,7 +123,7 @@ const StoryChoiceModal = () => {
       };
 
       // 마지막 페이지의 경우 bookId만 받음
-    } else if (socket && pageNum === 4) {
+    } else if (socket && pageNum === 6) {
       socket.onmessage = (event) => {
         const book = JSON.parse(event.data);
         setbookId(book.bookId);
