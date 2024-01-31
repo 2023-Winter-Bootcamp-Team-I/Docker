@@ -19,7 +19,7 @@ def generate_dalle_image_async(image_uuid, enContent):
     try:
         openai.api_key = get_secret("GPT_KEY")
         response = openai.Image.create(
-            model="dall-e-3",
+            model=get_secret("DALL_E_MODEL"),
             prompt=f"{enContent}"
                    f" Please draw the sentence in a cute art 2d style."
                    f"Bright color tones, cartoonish characters, clear outlines."
@@ -40,8 +40,8 @@ def gtts_async(tts_uuid, content, lan):
     print("진입")
 
     # 네이버 API 사용을 위한 설정 (클라이언트 ID와 시크릿)
-    client_id = get_secret("Naver_client_ID")  # 네이버 클라우드 플랫폼에서 발급받은 클라이언트 ID
-    client_secret = get_secret("Naver_client_SECRET") # 네이버 클라우드 플랫폼에서 발급받은 클라이언트 시크릿
+    client_id = get_secret("NAVER_CLIENT_ID")  # 네이버 클라우드 플랫폼에서 발급받은 클라이언트 ID
+    client_secret = get_secret("NAVER_CLIENT_SECRET") # 네이버 클라우드 플랫폼에서 발급받은 클라이언트 시크릿
 
     # 변환할 텍스트 인코딩
     encText = urllib.parse.quote(content)
@@ -92,8 +92,8 @@ def upload_to_s3(file_uuid, file, type):
     try:
         s3_client = boto3.client(
             's3',
-            aws_access_key_id=get_secret("Access_key_ID"),
-            aws_secret_access_key=get_secret("Secret_access_key")
+            aws_access_key_id=get_secret("ACCESS_KEY_ID"),
+            aws_secret_access_key=get_secret("SECRET_ACCESS_KEY")
         )
         print('진입 2')
         if type == 'image':
