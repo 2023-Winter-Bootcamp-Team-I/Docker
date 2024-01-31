@@ -93,7 +93,7 @@ function CreateInfoPage() {
     setTimeout(() => {
       setbookId(0);
       sendDataToServer();
-    }, 2500);
+    }, 3000);
 
     console.log('User Info:', userInfo);
   };

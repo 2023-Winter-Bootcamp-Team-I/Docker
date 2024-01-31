@@ -94,11 +94,21 @@ function CreationStartPage() {
                 />
               </div>
               <div className="flex flex-col basis-1/2 items-center align-middle mt-24 ml-20">
-                <div className="flex justify-center font-[Pretty] -mt-20 text-5xl w-2/3 leading-snug break-keep">
+                <div
+                  className="flex justify-center font-[Pretty] -mt-20 -ml-28 text-4xl w-2/3 leading-snug break-keep"
+                  style={{ textAlign: 'center', whiteSpace: 'pre-line' }}
+                >
                   {/* {originTitle}의 주인공이 되어 이야기를 완성시켜봐! */}
-                  {selectedLanguage === 'ko'
-                    ? `${t(originTitle)}${t('completeStory')}`
-                    : `${t('completeStory')}${t(originTitle)}`}
+                  {selectedLanguage === 'ko' ? (
+                    <>
+                      {t(originTitle)}
+                      {t('beCharater')}
+                      <br />
+                      {t('completeStory')}
+                    </>
+                  ) : (
+                    `${t('completeStory')}${t(originTitle)}`
+                  )}
                 </div>
               </div>
             </div>
