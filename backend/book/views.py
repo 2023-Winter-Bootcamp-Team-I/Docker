@@ -13,7 +13,7 @@ from user.models import User
 from book.models import Book
 from book.serializers import BookSerializer, BookCreateSerializer, PageContentSerializer, PageContentChoiceSerializer, \
     BookTitleCreateSerializer, UserBookListSerializer, DeleteBookSerializer, EmailBookShareSerializer
-
+from backend.settings import get_secret
 
 # 동화책 초기 정보 불러오거나 생성
 class BaseBook(APIView):
@@ -160,7 +160,7 @@ class EmailBookShare(APIView):
             url = "http://bookg/api/v1/books/"
             url_detail = url + f"{book_id}"
             subject = "소중한 책 선물"                         # 메일 제목
-            from_email = "kjy154969@naver.com"               # 보내는 사람
+            from_email = get_secret("YOUR_NAVER_USER_EMAIL")         # 보내는 사람
             message = f"{url_detail} 을 통해 공유 된 책을 감상할 수 있어요!"
             EmailMessage(subject=subject, body=message, to=[take], from_email=from_email).send()
             return Response({"message": "이메일 보내기 성공",
