@@ -48,7 +48,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
     <AnimatePresence>
       {isModalOpen && (
         <motion.div
-          className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white bg-opacity-30"
+          className="absolute z-100 top-0 left-0 w-screen h-screen flex items-center justify-center bg-mainColor bg-opacity-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -57,13 +57,13 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
           <button onClick={closeModal}>
             <img className="flex left-[69%] top-[30%] absolute z-40 " src={Close} alt="close_button" />
           </button>
-          <div className="bg-[#b0c9ff] mb-  w-[55rem] h-[25rem] rounded-xl flex flex-col z-20 justify-between">
+          <div className="bg-[#c7ddfa] w-[55rem] h-[25rem] rounded-xl flex flex-col z-20 justify-between">
             <div className="flex flex-col justify-center items-center ">
               <div className="flex  gap-4 -ml-28">
                 <img src={letter2} className="flex -mb-20  mr-10 scale-110" />
-                <p className="font-jua mt-20 text-white text-[2.7rem]">너의 동화책을 공유해봐!</p>
+                <p className="font-jua mt-20 text-[#4a8cff] text-[2.7rem]">완성한 동화책을 공유해봐!</p>
               </div>
-              <div className="flex mt-16 ">
+              <div className="flex mt-12 ">
                 <input
                   id="email"
                   name="email"
@@ -83,7 +83,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
                       handleShareButtonClick();
                       closeModal();
                     }}
-                    className="w-[15rem] h-[4.5rem] text-[#EEEEEE] bg-[#6c9aff] pt-2 text-[2rem] rounded-3xl border-[#6091fd] border-b-8 border-r-4 hover:bg-[#447fff] font-jua hover:border-[#296dff]"
+                    className="w-[12rem] h-[4rem] text-[#EEEEEE] bg-[#5e99ff] pt-2 text-[1.8rem] rounded-3xl border-[#6091fd] border-b-8 border-r-4 hover:bg-[#447fff] font-jua hover:border-[#296dff]"
                   >
                     공유하기
                   </button>

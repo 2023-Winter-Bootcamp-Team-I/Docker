@@ -157,12 +157,21 @@ const StoryChoiceModal = () => {
           <AnimatePresence>
             {isVisible && (
               <motion.div
-                className="font-[HS] text-[4rem] -mt-4 text-[#002875] z-20"
+                className="font-[HS] text-[3.6rem] -mt-4 text-[#002875] z-20"
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 2 }}
               >
-                {t('nextPageStory')}
+                {/* {t('nextPageStory')} */}
+                <motion.span
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+                  style={{ color: '#2873ff' }}
+                >
+                  {pageNum + 1}페이지
+                </motion.span>
+                는 어떤 이야기가 있을까?
               </motion.div>
             )}
           </AnimatePresence>
@@ -185,7 +194,7 @@ const StoryChoiceModal = () => {
                   animate={{ opacity: 1, y: 0 }} // 애니메이션 적용 상태
                   transition={{ duration: 0.5 }} // 애니메이션 지속 시간
                 >
-                  <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-[Pretty] flex justify-center pt-2 text-white text-4xl overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
+                  <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-bold font-[Pretty] flex justify-center pt-2 text-white text-4xl overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
                     첫번째 이야기
                   </div>
                   <div
@@ -203,7 +212,7 @@ const StoryChoiceModal = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-[Pretty] flex justify-center pt-2 text-white text-4xl overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
+                  <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-[Pretty] flex justify-center pt-2 text-white font-bold text-4xl overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
                     두번째 이야기
                   </div>
                   <div
