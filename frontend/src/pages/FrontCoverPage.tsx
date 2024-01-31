@@ -53,25 +53,25 @@ function FrontCoverPage() {
   }, [selectedLanguage, setUserLang]);
 
   return (
-    <div className="flex flex-col -pt-100">
+    <div className="flex flex-col bg-mainColor bg-opacity-50 relative z-10">
       <NavBar />
-      <div className="w-screen h-screen bg-mainColor bg-opacity-15 relative z-10 mt-6">
+      <div className="w-screen h-screen">
         <button
           className="absolute top-[45%] left-[2%] bg-moveButtonColor rounded-full h-24 w-24 ml-10 z-20"
           onClick={() => book.current && book.current.pageFlip().flipPrev()}
         >
           <img className="flex w-20 z-20 mx-auto -ml-[0.01px] mt-[0.02px] my-0" src={prevButtonImg} alt="prev_button" />
         </button>
-        <div className="flex flex-row h-screen mx-auto my-0 w-full px-10">
+        <div className="flex flex-row w-9/12 mx-auto my-0 px-10 mt-6 z-20">
           {bookData && (
             <HTMLFlipBook
-              width={1000}
-              height={1180}
+              width={1200}
+              height={1240}
               size="stretch"
               minWidth={400}
               maxWidth={1200}
-              minHeight={600}
-              maxHeight={1180}
+              minHeight={700}
+              maxHeight={1200}
               drawShadow={true}
               flippingTime={1000}
               className="book-theme"
@@ -92,10 +92,10 @@ function FrontCoverPage() {
             >
               <div className="flex flex-col w-full h-full">
                 <div className="flex justify-center">
-                  <img className="flex mx-auto min-h-full z-20 w-60 mt-36" src={robotImg} alt="robot_character" />
+                  <img className="flex mx-auto min-h-full z-20 w-52 mt-36" src={robotImg} alt="robot_character" />
                 </div>
-                <div className="flex flex-col basis-1/2 items-center align-middle mt-24 ml-20 gap-y-10">
-                  <div className="flex justify-center font-dongle text-6xl w-2/3 leading-snug break-keep">
+                <div className="flex flex-col basis-1/2 items-center align-middle mt-12 gap-y-10">
+                  <div className="flex justify-center font-[Pretty] text-4xl w-2/3 leading-snug break-keep">
                     {t('letsRead')}
                   </div>
                 </div>
@@ -132,11 +132,11 @@ export default FrontCoverPage;
 
 const BackCover = React.forwardRef(() => {
   return (
-    <div className="flex h-[830px] pb-6">
-      <div className="flex bg-bookCoverBack h-full w-full rounded-3xl">
-        <div className="flex flex-col bg-bookCoverFront h-full w-full mt-6 z-20 ml-6 -mr-6 rounded-3xl gap-8 items-end ">
+    <div className="flex h-[700px] pb-6">
+      <div className="flex bg-bookCoverBack h-full w-full rounded-2xl">
+        <div className="flex flex-col bg-bookCoverFront h-full w-full mt-5 z-20 ml-5 -mr-6 rounded-2xl gap-8 items-end ">
           <div className="bg-bookCoverLine h-1/5 w-full mt-[55%]"></div>
-          <img className="z-20 w-80 mr-10 mt-4" src={barcodeImg} alt="barcode_image" />
+          <img className="z-20 w-72 mr-10 mt-4" src={barcodeImg} alt="barcode_image" />
         </div>
       </div>
     </div>

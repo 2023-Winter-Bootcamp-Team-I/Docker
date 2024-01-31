@@ -32,7 +32,6 @@ function CreationFinishPage() {
         }
       }
     }, 1000);
-
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, []); // Run this effect only once on mount
@@ -40,13 +39,14 @@ function CreationFinishPage() {
   return (
     <div className="w-screen h-screen">
       <div className="h-full flex flex-col justify-center items-center">
-        <div className="w-11/12 xl:w-11/12 2xl:w-3/4 2xl:left-60 2xl:top-3 2xl:h-11/12 absolute left-16 top-6">
-          <div className="flex flex-col h-11/12">
+        {/* <div className="w-11/12 xl:w-11/12 2xl:w-3/4 2xl:left-60 2xl:top-3 2xl:h-11/12 absolute left-16 top-6"> */}
+        <div className="xl:w-8/12 md:w-10/12 w-10/12 h-4/6 absolute md:top-20 top-20">
+          <div className="flex flex-col">
             <HTMLFlipBook
-              width={1200}
-              height={1350}
+              width={1250}
+              height={1400}
               size="stretch"
-              minWidth={400}
+              minWidth={500}
               maxWidth={1200}
               minHeight={700}
               maxHeight={1180}

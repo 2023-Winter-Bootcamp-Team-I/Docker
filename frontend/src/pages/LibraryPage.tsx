@@ -114,7 +114,7 @@ const LibraryPage = () => {
               </Link>
             </div>
           </div>
-          <div className="relative z-30">
+          <div className="relative z-30 ">
             <div className="font-dongle text-[120px] text-[#F1F1F1] ml-8 mt-12 drop-shadow-[2px_3px_0px_rgba(0,0,0,0.35)]">
               <div>{t('library')}</div>
             </div>
@@ -126,7 +126,7 @@ const LibraryPage = () => {
                   <div className="flex-col w-64 h-[21rem] bg-[#f2f2f2] bg-opacity-65 rounded-2xl mt-4 mb-10 hover:bg-[#fbfbfb] hover:shadow-[3px_3px_0px_rgba(0,0,0,0.35)]">
                     <div className="w-64 h-64">
                       <button onClick={() => navigateToPage(book.book_id)}>
-                        <img src={book.image_url} className="rounded-2xl" />
+                        <img src={book.image_url} className="rounded-t-2xl" />
                       </button>
                     </div>
                     <div className="flex flex-row items-center justify-between px-4">
@@ -167,9 +167,9 @@ const LibraryPage = () => {
                 ))}
             </div>
           </div>
-          <div className="fixed bottom-10 right-12 flex items-end justify-end w-[7rem] h-[7rem] rounded-full bg-[#309CFF] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
+          <div className="absolute bottom-10 right-10 flex items-end justify-end w-[7rem] h-[7rem] rounded-full bg-[#309CFF] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
             <div className="mb-3 mr-1">
-              <Link to="/createinfopage">
+              <Link to="/bookguide">
                 <img src={addbook} alt="Add Book Icon" />
               </Link>
             </div>

@@ -55,14 +55,14 @@ function CreationStartPage() {
   return (
     <div className="w-screen h-screen">
       <div className="h-full flex flex-col justify-center items-center bg-mainColor bg-opacity-15 z-10">
-        <div className="flex flex-row h-full w-full xl:w-11/12 2xl:w-3/4 2xl:left-60 2xl:top-3 2xl:h-11/12 ">
+        <div className="flex flex-row xl:w-8/12 md:w-8/12 sm:w-8/12 w-10/12 h-4/6 absolute md:top-16 top-16 ">
           <HTMLFlipBook
             width={1200}
             height={1350}
             size="stretch"
-            minWidth={400}
+            minWidth={460}
             maxWidth={1200}
-            minHeight={600}
+            minHeight={750}
             maxHeight={1180}
             drawShadow={true}
             flippingTime={1000}
@@ -94,11 +94,21 @@ function CreationStartPage() {
                 />
               </div>
               <div className="flex flex-col basis-1/2 items-center align-middle mt-24 ml-20">
-                <div className="flex justify-center font-dongle -mt-20 text-6xl w-2/3 leading-snug break-keep">
+                <div
+                  className="flex justify-center font-[Pretty] -mt-20 -ml-28 text-4xl w-2/3 leading-snug break-keep"
+                  style={{ textAlign: 'center', whiteSpace: 'pre-line' }}
+                >
                   {/* {originTitle}의 주인공이 되어 이야기를 완성시켜봐! */}
-                  {selectedLanguage === 'ko'
-                    ? `${t(originTitle)}${t('completeStory')}`
-                    : `${t('completeStory')}${t(originTitle)}`}
+                  {selectedLanguage === 'ko' ? (
+                    <>
+                      {t(originTitle)}
+                      {t('beCharater')}
+                      <br />
+                      {t('completeStory')}
+                    </>
+                  ) : (
+                    `${t('completeStory')}${t(originTitle)}`
+                  )}
                 </div>
               </div>
             </div>
@@ -134,7 +144,7 @@ const FrontCover = React.forwardRef(() => {
     <div className="flex h-full pb-6">
       <div className="flex bg-bookCoverBack h-full w-full rounded-3xl">
         <div className="flex flex-col bg-bookCoverFront h-full w-full mt-5 z-20 -ml-6 mr-6 rounded-3xl items-center">
-          <div className="flex bg-bookCoverTextBox h-[25%] w-4/5 rounded-3xl border-2 border-shadowGray border-solid font-dongle mt-16 text-[7rem] items-center justify-center">
+          <div className="flex bg-bookCoverTextBox h-[25%] w-4/5 rounded-3xl border-2 border-shadowGray border-solid font-[Pretty] mt-16 text-[5rem] items-center justify-center">
             <div className="p-10 break-keep text-titleColor align-bottom">{originTitle}</div>
           </div>
           <div className="bg-bookCoverLine mt-48 h-1/5 w-full"></div>

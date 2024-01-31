@@ -15,8 +15,10 @@ import ReadBookPage from '@/pages/ReadBookPage';
 import LoadingPage from '@/pages/LoadingPage';
 import CreationStartPage from '@/pages/CreationStartPage';
 import CreationFinishPage from '@/pages/CreationFinishPage';
+import AboutUsPage from '@/pages/AboutUsPage';
 import ServicePage from '@/pages/ServicePage';
 import SliderPage from '@/pages/SliderPage';
+import BookGuidePage from '@/pages/BookGuidePage';
 
 const router = createBrowserRouter([
   {
@@ -98,6 +100,11 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path: '/aboutus',
+    element: <AboutUsPage />,
+  },
   {
     path: '/service',
     element: <ServicePage />,
@@ -105,6 +112,10 @@ const router = createBrowserRouter([
   {
     path: '/slide',
     element: <SliderPage />,
+  },
+  {
+    path: '/bookguide',
+    element: <BookGuidePage />,
   },
 
   // {

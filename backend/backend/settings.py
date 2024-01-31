@@ -23,7 +23,7 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured(error_msg)
 
 
-SECRET_KEY = get_secret("django_SECRET_KEY")
+SECRET_KEY = get_secret("DJANGO_SECRET_KEY")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -132,11 +132,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': 'db',
-        'PORT': '3306'
+        'NAME': get_secret("MYSQL_NAME"),
+        'USER': get_secret("MYSQL_USER"),
+        'PASSWORD': get_secret("MYSQL_PASSWORD"),
+        'HOST': get_secret("MYSQL_HOST"),
+        'PORT': get_secret("MYSQL_PORT")
     }
 }
 
@@ -184,8 +184,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.naver.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'kjy154969@naver.com'
-EMAIL_HOST_PASSWORD = get_secret("JIN_YONG_NAVER")
+EMAIL_HOST_USER = get_secret('YOUR_NAVER_USER_EMAIL')
+EMAIL_HOST_PASSWORD = get_secret("YOUR_NAVER_PWD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Celery

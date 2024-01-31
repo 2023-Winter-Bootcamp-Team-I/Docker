@@ -27,8 +27,8 @@ export const signUpUser = async (userData: SignUpData): Promise<void> => {
     setTimeout(() => {
       window.location.href = '/'; // 다른 방식으로 페이지 이동 가능
     }, 1500);
-  } catch (error: any) {
-    console.error('Error creating user:', error.message);
+  } catch (error) {
+    console.error('Error creating user:', error);
     Swal.fire({
       title: '회원가입에 실패했습니다!',
       text: '정보를 정확히 입력해주세요',
