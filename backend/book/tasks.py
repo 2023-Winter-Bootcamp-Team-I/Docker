@@ -92,8 +92,8 @@ def upload_to_s3(file_uuid, file, type):
     try:
         s3_client = boto3.client(
             's3',
-            aws_access_key_id=get_secret("Access_key_ID"),
-            aws_secret_access_key=get_secret("Secret_access_key")
+            aws_access_key_id=get_secret("ACCESS_KEY_ID"),
+            aws_secret_access_key=get_secret("SECRET_ACCESS_KEY")
         )
         print('진입 2')
         if type == 'image':
