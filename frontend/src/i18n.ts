@@ -58,7 +58,7 @@ i18n.use(initReactI18next).init({
         ageQuestion: '나이',
         languageQuestion: '언어',
         storyQuestion: '동화책',
-        createFairytale: '책 만들기',
+        createFairytale: '다음 단계',
         enterName: '이름 입력',
         genderMale: '남자',
         genderFemale: '여자',

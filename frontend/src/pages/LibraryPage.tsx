@@ -167,9 +167,9 @@ const LibraryPage = () => {
                 ))}
             </div>
           </div>
-          <div className="fixed bottom-10 right-12 flex items-end justify-end w-[7rem] h-[7rem] rounded-full bg-[#309CFF] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
+          <div className="absolute bottom-10 right-10 flex items-end justify-end w-[7rem] h-[7rem] rounded-full bg-[#309CFF] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
             <div className="mb-3 mr-1">
-              <Link to="/createinfopage">
+              <Link to="/bookguide">
                 <img src={addbook} alt="Add Book Icon" />
               </Link>
             </div>
