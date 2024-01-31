@@ -19,6 +19,17 @@ services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
       - web
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
 
+  certbot: #certbot 컨테이너 추가
+    image: certbot/certbot
+    restart: unless-stopped
+    container_name: certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    depends_on:
+      - nginx
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
   rabbitmq:
     image: "rabbitmq:3-management"
     ports:
@@ -86,14 +97,14 @@ services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
       - rabbitmq
     restart: always
 
-#  prometheus:
-#    image: prom/prometheus
-#    volumes:
-#      - ./backend/prometheus:/app/etc/prometheus
-#    ports:
-#      - "9090:9090"
-#
-#  grafana:
-#    image: grafana/grafana
-#    ports:
-#      - "3001:3000"
+  prometheus:
+   image: prom/prometheus
+   volumes:
+     - ./backend/prometheus:/app/etc/prometheus
+   ports:
+     - "9090:9090"
+
+  grafana:
+   image: grafana/grafana
+   ports:
+     - "3001:3000"
