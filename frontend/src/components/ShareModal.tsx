@@ -1,5 +1,4 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
-import letterImg from '@/assets/images/letter.svg';
 import letter2 from '@/assets/images/letter2.svg';
 import Close from '@/assets/images/Close.svg';
 import { sendEmail } from '@/api/email';

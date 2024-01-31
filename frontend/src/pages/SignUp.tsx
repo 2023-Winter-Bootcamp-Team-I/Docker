@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import pencilImg from '@/assets/images/pencil.svg';
 import { Link } from 'react-router-dom';
 import { signUpUser } from '@/api/users';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface SignUpData {
   password: string;

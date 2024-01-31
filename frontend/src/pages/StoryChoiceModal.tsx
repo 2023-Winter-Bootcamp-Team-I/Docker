@@ -160,7 +160,7 @@ const StoryChoiceModal = () => {
                 className="font-[HS] text-[4rem] -mt-4 text-[#002875] z-20"
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 3 }}
+                transition={{ duration: 2 }}
               >
                 {t('nextPageStory')}
               </motion.div>
@@ -172,7 +172,7 @@ const StoryChoiceModal = () => {
           className="flex flex-row justify-center h-[800px] -mt-16 pb-10 z-20"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 3 }}
+          transition={{ duration: 2 }}
         >
           {/* 큰 박스 */}
           <div className=" w-full h-[75%] pt-20 flex flex-row gap-10 justify-center z-20">
