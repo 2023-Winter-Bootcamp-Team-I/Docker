@@ -7,9 +7,9 @@ const CreateBookPage = () => {
   return (
     // 배경 색 흐릿하게
     <div className="w-screen h-screen bg-white bg-opacity-25 relative z-5">
-      <div className="flex mx-auto my-0 justify-center h-screen w-[1500px]">
+      <div className="flex mx-auto my-0 justify-center items-center h-screen w-screen">
         {/* 가장 큰 박스 */}
-        <div className=" w-[1450px] px-0 my-3 bg-[#93C4FF] rounded-2xl z-10">
+        <div className="px-0 my-3 bg-[#93C4FF] rounded-2xl z-10 xl:w-8/12 md:w-10/12 w-10/12 h-5/6">
           <div className="flex flex-row w-full h-full">
             {/* 왼쪽 박스 */}
             <div className=" w-1/2 flex justify-center items-center flex-col px-[2.5rem] py-8 border-[#7bb6ff] border-y-4 border-l-4 border-solid rounded-2xl">

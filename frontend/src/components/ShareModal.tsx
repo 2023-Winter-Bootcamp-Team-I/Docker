@@ -48,7 +48,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
     <AnimatePresence>
       {isModalOpen && (
         <motion.div
-          className="absolute z-100 top-0 left-0 w-screen h-screen flex items-center justify-center bg-mainColor bg-opacity-50"
+          className="absolute z-100 top-0 left-0 w-screen h-screen flex items-center justify-center bg-mainColor bg-opacity-30"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -57,7 +57,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
           <button onClick={closeModal}>
             <img className="flex left-[69%] top-[30%] absolute z-40 " src={Close} alt="close_button" />
           </button>
-          <div className="bg-[#c7ddfa] w-[55rem] h-[25rem] rounded-xl flex flex-col z-20 justify-between">
+          <div className="bg-[#aac8f3] w-[55rem] h-[25rem] rounded-xl flex flex-col z-20 justify-between">
             <div className="flex flex-col justify-center items-center ">
               <div className="flex  gap-4 -ml-28">
                 <img src={letter2} className="flex -mb-20  mr-10 scale-110" />
