@@ -21,15 +21,15 @@ interface BookType {
 function CreationStartPage() {
   const book = useRef<BookType>(null);
   const originTitle = useRecoilValue<string>(originTitleAtom);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { t } = useTranslation();
   const setUserLang = useSetRecoilState(userLanguage);
   const selectedLanguage = useRecoilValue(userLanguage);
 
   const navigateToCreateBookPage = () => {
-    setTimeout(() => {
-      navigate('../createbookpage');
-    }, 800);
+    // setTimeout(() => {
+    //   navigate('../createbookpage');
+    // }, 800);
   };
 
   useEffect(() => {
@@ -55,14 +55,14 @@ function CreationStartPage() {
   return (
     <div className="w-screen h-screen">
       <div className="h-full flex flex-col justify-center items-center bg-mainColor bg-opacity-15 z-10">
-        <div className="flex flex-row h-full w-full xl:w-11/12 2xl:w-3/4 2xl:left-60 2xl:top-3 2xl:h-11/12 ">
+        <div className="flex flex-row xl:w-8/12 md:w-8/12 sm:w-8/12 w-10/12 h-4/6 absolute md:top-16 top-16 ">
           <HTMLFlipBook
             width={1200}
             height={1350}
             size="stretch"
-            minWidth={400}
+            minWidth={460}
             maxWidth={1200}
-            minHeight={600}
+            minHeight={750}
             maxHeight={1180}
             drawShadow={true}
             flippingTime={1000}
