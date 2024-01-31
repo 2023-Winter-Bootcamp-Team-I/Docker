@@ -27,9 +27,9 @@ function CreationStartPage() {
   const selectedLanguage = useRecoilValue(userLanguage);
 
   const navigateToCreateBookPage = () => {
-    // setTimeout(() => {
-    //   navigate('../createbookpage');
-    // }, 800);
+    setTimeout(() => {
+      navigate('../createbookpage');
+    }, 800);
   };
 
   useEffect(() => {
