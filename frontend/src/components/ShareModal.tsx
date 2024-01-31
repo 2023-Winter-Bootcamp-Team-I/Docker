@@ -36,6 +36,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
   };
 
   useEffect(() => {
+    console.log(bookId);
     document.body.style.overflow = 'hidden';
     setIsModalOpen(true);
     return () => {

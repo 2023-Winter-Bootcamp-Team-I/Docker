@@ -21,7 +21,7 @@ export const loginUser = async (loginData: LoginData): Promise<AxiosResponse> =>
 
     // 추가적인 성공 처리 (예: 리다이렉트)
   } catch (error) {
-    console.error('Error fetching books:', error.message);
+    console.error('Error fetching books:', error);
     Swal.fire({
       title: '로그인 실패',
       text: '이메일 또는 비밀번호를 확인해주세요.',

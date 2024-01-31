@@ -22,45 +22,56 @@ services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
       timeout: 5s
 
   web:
-    build: .
+    build: ./backend
     depends_on:
       - db
       - rabbitmq
     ports:
       - "8000:8000"
     volumes:
-      - .:/app
+      - ./backend/:/app/
     restart: always
     environment:
       WAIT_HOSTS: db:3306, rabbitmq:5672
     expose:
       - "8000"
 
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./frontend/:/frontend
+      - ./frontend/node_modules/:/frontend/node_modules
+    tty: true
+
   celery_worker:
-    build: .
+    build: ./backend
     command: celery -A backend worker --loglevel=info
     volumes:
-      - .:/app
+      - ./backend/:/app/
     depends_on:
       - web
       - rabbitmq
     restart: always
 
   celery_beat:
-    build: .
+    build: ./backend
     command: celery -A backend beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
     volumes:
-      - .:/app
+      - ./backend/:/app/
     depends_on:
       - web
       - rabbitmq
     restart: always
 
-
   prometheus:
     image: prom/prometheus
     volumes:
-      - ./prometheus:/etc/prometheus
+      - ./backend/prometheus:/app/etc/prometheus
     ports:
       - "9090:9090"
 

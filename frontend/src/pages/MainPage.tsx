@@ -8,6 +8,7 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { userLanguage, userIDState } from '@/states/atom';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
+// import ServicePage from './ServicePage';
 
 const MainPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -75,35 +76,41 @@ const MainPage = () => {
           <div className="flex gap-12 h-20 font-[Jua] font-semibold">
             {userID ? (
               <Link to="/library">
-                <button className="w-[13rem] h-[4.5rem] bg-mainBlue pt-2 text-[2rem] rounded-3xl border-[#4695D9] border-b-8 border-r-4 hover:bg-[#179EFF] hover:scale-110">
+                <motion.button
+                  className="w-[13rem] h-[4.5rem] bg-mainBlue pt-2 text-[2rem] rounded-3xl border-[#4695D9] border-b-8 border-r-4 hover:bg-[#179EFF] hover:scale-110"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.7 }}
+                >
                   {t('library')}
-                </button>
+                </motion.button>
               </Link>
             ) : (
               <motion.button
                 onClick={openModal}
                 className="w-[13rem] h-[4.5rem] bg-mainBlue pt-2 text-[2rem] rounded-3xl border-[#4695D9] border-b-8 border-r-4 hover:bg-[#179EFF]"
                 whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.7 }}
               >
                 {t('login')}
               </motion.button>
             )}
             {userID ? (
               <Link to="/">
-                <button
-                  className="w-[13rem] h-[4.5rem] bg-[#F1F1F1] text-mainBlue pt-2 text-[2rem] rounded-3xl border-[#AAAAAA] border-b-8 border-r-4 hover:bg-[#ffffff] hover:scale-110"
+                <motion.button
+                  className=" w-[13rem] h-[4.5rem] bg-[#F1F1F1] text-mainBlue pt-2 text-[2rem] rounded-3xl border-[#AAAAAA] border-b-8 border-r-4 hover:bg-[#ffffff] hover:scale-110"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.7 }}
                   onClick={handleLogout}
                 >
                   {t('logout')}
-                </button>
+                </motion.button>
               </Link>
             ) : (
               <Link to="/signup">
                 <motion.button
-                  className="w-[13rem] h-[4.5rem] bg-[#F1F1F1] text-mainBlue pt-2 text-[2rem] rounded-3xl border-[#AAAAAA] border-b-8 border-r-4 hover:bg-[#ffffff]"
+                  className=" w-[13rem] h-[4.5rem] bg-[#F1F1F1] text-mainBlue pt-2 text-[2rem] rounded-3xl border-[#AAAAAA] border-b-8 border-r-4 hover:scale-110 hover:bg-[#ffffff]"
                   whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.7 }}
                 >
                   {t('signup')}
                 </motion.button>

@@ -54,7 +54,7 @@ body {
   /* font-weight: 300;
   font-family: Inter; */
   /* color:black; */
-  overflow: hidden;
+  overflow-x: hidden;
 }
 a {
   text-decoration:none;
@@ -103,4 +103,40 @@ a {
   font-style: normal;
   font-weight: 400;
   src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+}
+
+
+@keyframes infiniteAnimation1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-105%);
+  }
+}
+
+@keyframes infiniteAnimation2 {
+  0% {
+      transform: translateX(105%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+}
+@keyframes infiniteAnimation3 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(105%);
+  }
+}
+
+@keyframes infiniteAnimation4 {
+  0% {
+      transform: translateX(-105%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
 }

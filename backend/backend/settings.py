@@ -8,7 +8,7 @@ from pathlib import Path
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+print(BASE_DIR)
 secret_file = os.path.join(BASE_DIR, 'secrets.json')
 
 with open(secret_file) as f:
@@ -50,9 +50,8 @@ INSTALLED_APPS = [
     'channels',
     'django_celery_beat',
     'django_celery_results',
+    'gtts',
     'django_prometheus',
-    'gtts'
-
 ]
 
 ASGI_APPLICATION = "backend.asgi.application"
@@ -68,7 +67,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_prometheus.middleware.PrometheusBeforeMiddleware',
-    'django_prometheus.middleware.PrometheusAfterMiddleware'
+    'django_prometheus.middleware.PrometheusAfterMiddleware',
 ]
 
 ##CORS
