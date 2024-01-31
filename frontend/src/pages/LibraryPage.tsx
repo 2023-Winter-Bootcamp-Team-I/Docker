@@ -114,7 +114,7 @@ const LibraryPage = () => {
               </Link>
             </div>
           </div>
-          <div className="relative z-30">
+          <div className="relative z-30 ">
             <div className="font-dongle text-[120px] text-[#F1F1F1] ml-8 mt-12 drop-shadow-[2px_3px_0px_rgba(0,0,0,0.35)]">
               <div>{t('library')}</div>
             </div>
