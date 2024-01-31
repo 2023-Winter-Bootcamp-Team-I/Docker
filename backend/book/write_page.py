@@ -163,16 +163,6 @@ class WritePage(WebsocketConsumer):
             {
                 "role": "system",
                 "content": f"Please act like a woman teacher who reads books."
-                           # f"<Initial Information> "
-                           # f"Main character's name:{user_info['userName']}, Main character's gender:{user_info['gender']}, Target age group:{user_info['age']}, Original fairy tale:{user_info['fairyTale']} "
-                           # f"<End of Initial Information>"
-                           # f"Based on the <Initial Information>, please present me with the beginnings of two different stories, each in one sentence. Wait for me to choose one of the stories before continuing. Once I have made my choice, continue with the story I selected by presenting me with two different story progressions, each in one sentence. Please also translate each sentence into English. Although the stories should be different, they must be based on the <Initial Information>. Please answer within two sentences.When the sentence is in Korean, please use formal language. 예시) '~했어요.'"
-                           # f"Please replace the existing protagonist with {user_info['userName']} of the <Initial Information>."
-                           # f"Please follow the format where the sentence comes right after '@' or '#' as below."
-                           # f"@korean"
-                           # f"@english"
-                           # f"#korean"
-                           # f"#english"
             },{
                 "role": "user",
                 "content": f"<Initial Information> "
@@ -195,16 +185,6 @@ class WritePage(WebsocketConsumer):
             {
                 "role": "system",
                 "content": f"Please act like a woman teacher who reads books."
-                           # f"<Previous Story Information>"
-                           # f"{self.book_content}"
-                           # f"<End of Previous Story>"
-                           # f"Based on the <Previous Story Information>, please present me with the beginnings of two different stories, each in one sentence. Wait for me to choose one of the stories before continuing. After I make my choice, continue with the story I selected by presenting me with two different continuations, each in one sentence. Please also translate each sentence into English. Although the stories should be different, they must be based on the <Previous Story Information>.When the sentence is in Korean, please use formal language. 예시) '~했어요.'"
-                           # f"Please use the same language as in the <Previous Story Information>."
-                           # f"Please follow the format where the sentence comes right after '@' or '#' as below."
-                           # f"@korean"
-                           # f"@english"
-                           # f"#korean"
-                           # f"#english"
             },{
                 "role": "user",
                 "content": f"<Previous Story Information>"
@@ -224,16 +204,7 @@ class WritePage(WebsocketConsumer):
         self.conversation = [
             {
                 "role": "system",
-                "content": f"Please act like a woman teacher who reads books."
-                           # f"<Previous Story Information>"
-                           # f"{self.book_content}"
-                           # f"<End of Previous Story>"
-                           # f"Please write a fairy tale story to its conclusion, continuing from the <Previous Story Information> as a single narrative.When the sentence is in Korean, please use formal language. 예시) '~했어요.'"
-                           # f"Please finish with two endings caused by the <Previous Story Information>."
-                           # f"Please use the same language as in the <Previous Story Information>."
-                           # f"Please follow the format where the sentence comes right after '@' or '#' as below."
-                           # f"@korean"
-                           # f"@english"
+                "content": f"Act like a female teacher who finishes the story of a book superbly."
             },{
                 "role": "user",
                 "content": f"<Previous Story Information>"
