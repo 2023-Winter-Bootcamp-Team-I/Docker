@@ -63,9 +63,9 @@ services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
       dockerfile: Dockerfile
     volumes:
       - ./frontend/:/frontend
-      - build_folder:/frontend/dist
       - ./frontend/node_modules/:/frontend/node_modules
     tty: true
+
 
   prometheus:
     image: prom/prometheus
