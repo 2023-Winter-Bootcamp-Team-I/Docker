@@ -1,6 +1,21 @@
-FROM node:13.12.0-alpine as builder
+FROM node:16-alpine
+
+# set working directory
+# 작업을 수행할 디렉토리를 지정
 WORKDIR /frontend
 
-COPY . ./
+# 현재 경로에 있는 것을 frontend로 복사
+COPY . .
 
-RUN npm i && npm cache clear --force && npm run build
+RUN npm cache clean --force
+
+RUN npm install
+RUN npm install recoil
+
+RUN npm install framer-motion
+RUN npm install -g vite
+
+# 배포 시에는 build 파일이 쓰이지 않으므로 상관 없음
+RUN npm run build
+
+CMD ["npm", "run", "dev"]
