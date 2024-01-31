@@ -4,8 +4,8 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import mainPageImg from '@/assets/images/mainPage.png';
-import createInfoPageImg from '@/assets/images/CreateInfoPage.png';
-import createBookPageImg from '@/assets/images/CreateBookPage.png';
+// import createInfoPageImg from '@/assets/images/CreateInfoPage.png';
+// import createBookPageImg from '@/assets/images/CreateBookPage.png';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -70,13 +70,13 @@ export default function AboutUsPage() {
             <div className="flex flexrow gap-x-10">
               <div className="flex items-center">
                 <TabPanel value={value} index={0}>
-                  <img src={createInfoPageImg} className="h-96 w-11/12"></img>
+                  {/* <img src={createInfoPageImg} className="h-96 w-11/12"></img> */}
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                  <img src={createInfoPageImg} className="h-96 w-11/12"></img>
+                  {/* <img src={createInfoPageImg} className="h-96 w-11/12"></img> */}
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                  <img src={createBookPageImg} className="h-96 w-11/12"></img>
+                  {/* <img src={createBookPageImg} className="h-96 w-11/12"></img> */}
                 </TabPanel>
                 <TabPanel value={value} index={3}>
                   <img src={mainPageImg} className="h-96 w-11/12"></img>

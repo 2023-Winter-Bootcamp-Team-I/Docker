@@ -50,7 +50,7 @@ export default function ServicePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 30 }}
-          transition={{ duration: 3, delay: 1.5 }}
+          transition={{ duration: 3, delay: 1 }}
         >
           <div className="flex justify-around items-center bg-[#FCFCFC] bg-opacity-40 shadow-[3px_4px_4px_1px_rgba(0,0,0,0.20)] rounded-[1.5rem] px-4 w-[480px] h-[200px]">
             <div className="flex flex-col">
@@ -78,7 +78,7 @@ export default function ServicePage() {
           className="flex flex-row gap-12 mt-8 items-center justify-center w-full h-full"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 3, delay: 2.5 }}
+          transition={{ duration: 2.5, delay: 2.0 }}
         >
           <div className="flex justify-around items-center bg-[#FCFCFC] bg-opacity-40 shadow-[3px_4px_4px_1px_rgba(0,0,0,0.20)] rounded-[1.5rem] px-4 w-[480px] h-[200px]">
             <div className="flex flex-col">
