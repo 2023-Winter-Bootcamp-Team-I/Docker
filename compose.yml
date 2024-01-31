@@ -36,6 +36,18 @@ services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
     expose:
       - "8000"
 
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./frontend/:/frontend
+      - ./frontend/node_modules/:/frontend/node_modules
+    tty: true
+
   celery_worker:
     build: ./backend
     command: celery -A backend worker --loglevel=info
@@ -55,17 +67,6 @@ services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
       - web
       - rabbitmq
     restart: always
-
-  frontend:
-    container_name: frontend
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    volumes:
-      - ./frontend/:/frontend
-      - ./frontend/node_modules/:/frontend/node_modules
-    tty: true
-
 
   prometheus:
     image: prom/prometheus
