@@ -245,7 +245,7 @@ class WritePage(WebsocketConsumer):
         openai.api_key = get_secret("GPT_KEY")
         # GPT-3 스트리밍 API 호출
         for response in openai.ChatCompletion.create(
-                model="gpt-4",
+                model=get_secret("GPT_MODEL"),
                 # model="gpt-4",
                 messages=self.conversation,
                 temperature=0.5,
