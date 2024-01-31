@@ -15,6 +15,7 @@ import ReadBookPage from '@/pages/ReadBookPage';
 import LoadingPage from '@/pages/LoadingPage';
 import CreationStartPage from '@/pages/CreationStartPage';
 import CreationFinishPage from '@/pages/CreationFinishPage';
+import AboutUsPage from '@/pages/AboutUsPage';
 import ServicePage from '@/pages/ServicePage';
 import SliderPage from '@/pages/SliderPage';
 
@@ -99,6 +100,9 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: '/aboutus',
+    element: <AboutUsPage />,
+  },
     path: '/service',
     element: <ServicePage />,
   },
