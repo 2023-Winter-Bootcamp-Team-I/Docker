@@ -23,6 +23,11 @@ function TabPanel(props: TabPanelProps) {
       id={`vertical-tabpanel-${index}`}
       aria-labelledby={`vertical-tab-${index}`}
       {...other}
+      // style={{
+      //   position: 'fixed', // Fixed position for tab panel
+      //   left: '300px', // Adjust left position as needed
+      //   width: '300px', // Adjust width to accommodate fixed tabs
+      // }}
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
@@ -49,7 +54,7 @@ function a11yProps(index: number) {
 }
 
 export default function AboutUsPage() {
-  const [value, setValue] = React.useState(6);
+  const [value, setValue] = React.useState(7);
 
   const handleChange = (newValue: number) => {
     setValue(newValue);
@@ -58,40 +63,44 @@ export default function AboutUsPage() {
   return (
     <div className="flex bg-linear-gradient h-screen w-screen items-center justify-center">
       <div className="flex flex-col gap-y-16">
-        <div className="flex">
+        <div className="flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Box
             sx={{
               flexGrow: 1,
               bgcolor: 'background.linear-gradient',
               display: 'flex justify-center items-center',
               height: 500,
+              width: 1100,
             }}
           >
             <div className="flex flexrow gap-x-10">
               <div className="flex items-center">
                 <TabPanel value={value} index={0}>
-                  <img src={createInfoPageImg} className="h-96 w-11/12"></img>
+                  <img src={createInfoPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                  <img src={createInfoPageImg} className="h-96 w-11/12"></img>
+                  <img src={createInfoPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                  <img src={createBookPageImg} className="h-96 w-11/12"></img>
+                  <img src={createBookPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                  <img src={mainPageImg} className="h-96 w-11/12"></img>
+                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={4}>
-                  <img src={mainPageImg} className="h-96 w-11/12"></img>
+                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={5}>
-                  <img src={mainPageImg} className="h-96 w-11/12"></img>
+                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={6}>
-                  <img src={mainPageImg} className="h-96 w-11/12"></img>
+                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
+                </TabPanel>
+                <TabPanel value={value} index={7}>
+                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
               </div>
-              <div className="flex flex-col gap-y-8">
+              <div className="flex flex-col gap-y-8 w-[400px]">
                 <div className="flex items-left justify-left font-jua text-4xl -ml-2"></div>
                 <div className="flex flex-row">
                   <div className="flex">
@@ -115,6 +124,7 @@ export default function AboutUsPage() {
                           }}
                         />
                       </div>
+
                       <div className="align-left" onClick={() => handleChange(1)}>
                         <Tab
                           label="동화책 주인공 설정"
@@ -127,6 +137,11 @@ export default function AboutUsPage() {
                           }}
                         />
                       </div>
+                      {value === 1 && (
+                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-1">
+                          동화책 주인공을 설정합니다 생성된 두가지의 스토리 중 하나를 선택합니다
+                        </div>
+                      )}
                       <div className="align-left" onClick={() => handleChange(2)}>
                         <Tab
                           label="글 선택하기"
@@ -139,6 +154,11 @@ export default function AboutUsPage() {
                           }}
                         />
                       </div>
+                      {value === 2 && (
+                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-1">
+                          인공지능이 생성한 두가지의 이야기 중 하나를 선택합니다
+                        </div>
+                      )}
                       <div className="align-left" onClick={() => handleChange(3)}>
                         <Tab
                           label="그림과 함께 책 읽기"
@@ -151,6 +171,11 @@ export default function AboutUsPage() {
                           }}
                         />
                       </div>
+                      {value === 3 && (
+                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-1">
+                          인공지능이 그려준 그림과 함께 책을 읽을 수 있습니다
+                        </div>
+                      )}
                       <div className="align-left" onClick={() => handleChange(4)}>
                         <Tab
                           label="목소리와 함께 책 읽기"
@@ -163,6 +188,11 @@ export default function AboutUsPage() {
                           }}
                         />
                       </div>
+                      {value === 4 && (
+                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-1">
+                          음성 지원으로 생성된 책을 들으며 읽을 수 있습니다
+                        </div>
+                      )}
                       <div className="align-left" onClick={() => handleChange(5)}>
                         <Tab
                           label="동화책 공유"
@@ -175,6 +205,11 @@ export default function AboutUsPage() {
                           }}
                         />
                       </div>
+                      {value === 5 && (
+                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-1">
+                          친구와 함께 내가 만든 책을 공유 할 수 있습니다
+                        </div>
+                      )}
                       <div className="align-left" onClick={() => handleChange(6)}>
                         <Tab
                           label="한/영 모두 지원"
@@ -187,6 +222,11 @@ export default function AboutUsPage() {
                           }}
                         />
                       </div>
+                      {value === 6 && (
+                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-1">
+                          모든 기능은 한국어와 영어 두가지 언어로 제공 됩니다
+                        </div>
+                      )}
 
                       <div className="align-left" onClick={() => handleChange(7)}>
                         <Tab
@@ -203,23 +243,25 @@ export default function AboutUsPage() {
                   </div>
                   <div className="flex">
                     <div style={{ maxWidth: '450px' }}>
-                      <TabPanel value={value} index={0}></TabPanel>
-                      <TabPanel value={value} index={1}>
+                      {/* <TabPanel value={value} index={0}></TabPanel> */}
+                      {/* <TabPanel value={value} index={1}>
                         동화책 주인공을 설정합니다 생성된 두가지의 스토리 중 하나를 선택합니다
                       </TabPanel>
                       <TabPanel value={value} index={2}>
-                        Item Three
+                        인공지능이 생성한 두가지의 이야기 중 하나를 선택합니다
                       </TabPanel>
                       <TabPanel value={value} index={3}>
-                        Item Four
+                        인공지능이 그려준 그림과 함께 책을 읽을 수 있습니다
                       </TabPanel>
                       <TabPanel value={value} index={4}>
-                        Item Five
+                        음성 지원으로 생성된 책을 들으며 읽을 수 있습니다
+                      </TabPanel> */}
+                      {/* <TabPanel value={value} index={5}>
+                        친구와 함께 내가 만든 책을 공유 할 수 있습니다
                       </TabPanel>
-                      <TabPanel value={value} index={5}>
-                        Item Six
-                      </TabPanel>
-                      <TabPanel value={value} index={6}></TabPanel>
+                      <TabPanel value={value} index={6}>
+                        모든 기능은 한국어와 영어 두가지 언어로 제공 됩니다
+                      </TabPanel> */}
                     </div>
                   </div>
                 </div>
