@@ -99,6 +99,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: '/aboutus',
     element: <AboutUsPage />,

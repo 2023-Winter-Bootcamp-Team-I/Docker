@@ -92,10 +92,10 @@ function FrontCoverPage() {
             >
               <div className="flex flex-col w-full h-full">
                 <div className="flex justify-center">
-                  <img className="flex mx-auto min-h-full z-20 w-60 mt-36" src={robotImg} alt="robot_character" />
+                  <img className="flex mx-auto min-h-full z-20 w-52 mt-48" src={robotImg} alt="robot_character" />
                 </div>
-                <div className="flex flex-col basis-1/2 items-center align-middle mt-24 ml-20 gap-y-10">
-                  <div className="flex justify-center font-dongle text-6xl w-2/3 leading-snug break-keep">
+                <div className="flex flex-col basis-1/2 items-center align-middle mt-12 gap-y-10">
+                  <div className="flex justify-center font-[Pretty] text-4xl w-2/3 leading-snug break-keep">
                     {t('letsRead')}
                   </div>
                 </div>
