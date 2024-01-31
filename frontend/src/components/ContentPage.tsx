@@ -34,7 +34,7 @@ const ContentPage = React.forwardRef(({ pageData }: ContentPageProps) => {
       <div className="flex flex-col items-center justify-around box-border px-2 w-full h-[776px] bg-white bg-opacity-45  rounded-2xl z-30">
         <img src={pageData.image_url} className=" mt-12 h-1/2 z-30 rounded-lg" alt="content_image" />
         <div className="box-border mt-4 h-[55%] w-[95%] bg-[#fdfdfd] bg-opacity-70 rounded-2xl z-30 pb-10 mb-10 overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
-          <div className="flex flex-col justify-center font-dongle text-5xl p-8  ">
+          <div className="flex flex-col justify-center font-[Pretty] text-3xl p-8  ">
             <div className="flex justify-end -mt-4 mb-4">
               <AudioButton></AudioButton>
             </div>
