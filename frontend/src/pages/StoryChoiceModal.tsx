@@ -4,7 +4,7 @@ import { useWebSocket } from '@/websocket/WebSocketProvider';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -28,7 +28,7 @@ const StoryChoiceModal = () => {
   // const [socketSent, setSocketSend] = useState<boolean>(false);
   // const setbookId = useSetRecoilState<number>(bookID);
   const [bookId, setbookId] = useRecoilState(bookID);
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const setUserLanState = useSetRecoilState(userLanguage);
   const selectedLanguage = useRecoilValue(userLanguage);
 

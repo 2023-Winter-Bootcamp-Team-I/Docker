@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import React from 'react';
 import { useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface BookType {
   pageFlip(): {
@@ -15,25 +15,25 @@ interface BookType {
 
 function CreationFinishPage() {
   const book = useRef<BookType>(null);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const navigateToCreateBookPage = () => {
-    // setTimeout(() => {
-    //   navigate('../title');
-    // }, 1000);
+    setTimeout(() => {
+      navigate('../title');
+    }, 1000);
   };
 
   useEffect(() => {
     // Set an interval to flip the page every 5 seconds
-    // const intervalId = setInterval(() => {
-    //   if (book.current) {
-    //     // Check if the book is not flipping, then flip to the next page
-    //     if (!book.current.pageFlip().isFlipping) {
-    //       book.current.pageFlip().flipNext();
-    //     }
-    //   }
-    // }, 1000);
+    const intervalId = setInterval(() => {
+      if (book.current) {
+        // Check if the book is not flipping, then flip to the next page
+        if (!book.current.pageFlip().isFlipping) {
+          book.current.pageFlip().flipNext();
+        }
+      }
+    }, 1000);
     // Clear the interval when the component unmounts
-    // return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId);
   }, []); // Run this effect only once on mount
 
   return (

@@ -21,15 +21,15 @@ interface BookType {
 function CreationStartPage() {
   const book = useRef<BookType>(null);
   const originTitle = useRecoilValue<string>(originTitleAtom);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const setUserLang = useSetRecoilState(userLanguage);
   const selectedLanguage = useRecoilValue(userLanguage);
 
   const navigateToCreateBookPage = () => {
-    // setTimeout(() => {
-    //   navigate('../createbookpage');
-    // }, 800);
+    setTimeout(() => {
+      navigate('../createbookpage');
+    }, 800);
   };
 
   useEffect(() => {
