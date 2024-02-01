@@ -18,7 +18,6 @@ import img17 from '@/assets/images/Siler/img17.jpeg';
 import img18 from '@/assets/images/Siler/img18.jpeg';
 import img19 from '@/assets/images/Siler/img19.jpeg';
 import img20 from '@/assets/images/Siler/img20.jpeg';
-import book2 from '@/assets/images/Service/book2.jpeg';
 import '@/index.css';
 
 const SliderPage = () => {
@@ -36,7 +35,7 @@ const SliderPage = () => {
   };
 
   return (
-    <div className="flex flex-col w-screen h-screen bg-[#DAEAFF]">
+    <div className="flex flex-col w-screen h-screen bg-[#DAEAFF] -mb-64">
       <div className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[jua] mb-12">
         <p className="mb-3">
           북그북그에서 만나는
