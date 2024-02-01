@@ -81,6 +81,13 @@ a {
 }
 
 @font-face {
+  font-family: 'KCC2';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Pretty';
   src: local('Pretty'),
   url('./assets/fonts/Pretty/pretty.ttf');
@@ -99,10 +106,29 @@ a {
 }
 
 @font-face {
-  font-family: 'LotteMartHappy';
+  font-family: 'LM';
   font-style: normal;
   font-weight: 400;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PR';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gal';
+  src: local('Gal'),
+  url('./assets/fonts/Gal/Galmuri9.ttf');
+}
+
+@font-face {
+  font-family: 'Sun';
+  src: local('Sun'),
+  url('./assets/fonts/Sunflower/Sunflower-Medium.ttf');
 }
 
 

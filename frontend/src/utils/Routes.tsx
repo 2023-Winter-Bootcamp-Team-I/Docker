@@ -19,6 +19,7 @@ import AboutUsPage from '@/pages/AboutUsPage';
 import ServicePage from '@/pages/ServicePage';
 import SliderPage from '@/pages/SliderPage';
 import BookGuidePage from '@/pages/BookGuidePage';
+import HomePage from '@/pages/HomePage';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <MainPage />,
+      },
+      {
+        path: 'home',
+        element: <HomePage />,
       },
       {
         path: 'signup',
