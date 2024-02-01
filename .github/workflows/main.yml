@@ -11,8 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install SSH key
-      run: echo "${{ secrets.EC2_PRIVATE_KEY }}" > /tmp/private_key.pem && chmod 600 /tmp/private_key.pem
+    - name: Create /tmp directory
+      run: mkdir -p /tmp
+
+    - name: Save private key
+      run: echo "${{ secrets.EC2_PRIVATE_KEY }}" > /tmp/private_key.pem
+
+    - name: Set key file permissions
+      run: chmod 600 /tmp/private_key.pem
 
     - name: Deploy to EC2
       run: |
