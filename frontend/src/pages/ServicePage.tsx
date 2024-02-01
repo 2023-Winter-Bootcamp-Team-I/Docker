@@ -13,12 +13,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 export default function ServicePage() {
   return (
     <div className="flex flex-col items-center w-screen h-full min-h-screen relative bg-linear-gradient z-0 p-24">
-      <img src={jelly1} className="absolute -top-11 left-12 w-60 h-40" />
+      {/* <img src={jelly1} className="absolute -top-11 left-12 w-60 h-40" />
       <img src={jelly2} className="absolute -top-4 transition-transform right-12 w-52 h-24" />
       <img src={jelly3} className="absolute top-32 left-16" />
       <img src={jelly4} className="absolute top-32 right-8 w-40" />
       <img src={jelly5} className="absolute bottom-[30%] left-12 w-32" />
-      <img src={jelly6} className="absolute bottom-[35%] right-12 w-28" />
+      <img src={jelly6} className="absolute bottom-[35%] right-12 w-28" /> */}
 
       <AnimatePresence>
         <motion.div
