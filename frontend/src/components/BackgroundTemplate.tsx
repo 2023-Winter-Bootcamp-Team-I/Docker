@@ -9,7 +9,7 @@ import { ReactNode } from 'react';
 
 const BackgroundTemplate: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <div className=" w-screen h-full min-h-screen max-h-screen relative bg-mainColor z-0">
+    <div className=" w-screen h-full min-h-screen max-h-screen relative bg-[#CDE3FF] z-0">
       <img src={jelly1} className="absolute z-0 top-0 left-12 w-44 h-28 rotate-0" />
       <img src={jelly2} className="absolute z-0 top-6 right-64 w-44 h-28" />
       <img src={jelly3} className="absolute z-0 top-0 right-4 w-44 h-28" />
