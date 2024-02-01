@@ -1,4 +1,23 @@
-import book1 from '@/assets/images/Service/book.jpeg';
+import img1 from '@/assets/images/Siler/img1.jpeg';
+import img2 from '@/assets/images/Siler/img2.jpeg';
+import img3 from '@/assets/images/Siler/img3.jpeg';
+import img4 from '@/assets/images/Siler/img4.jpeg';
+import img5 from '@/assets/images/Siler/img5.jpeg';
+import img6 from '@/assets/images/Siler/img6.jpeg';
+import img7 from '@/assets/images/Siler/img7.jpeg';
+import img8 from '@/assets/images/Siler/img8.jpeg';
+import img9 from '@/assets/images/Siler/img9.jpeg';
+import img10 from '@/assets/images/Siler/img10.jpeg';
+import img11 from '@/assets/images/Siler/img11.jpeg';
+import img12 from '@/assets/images/Siler/img12.jpeg';
+import img13 from '@/assets/images/Siler/img13.jpeg';
+import img14 from '@/assets/images/Siler/img14.jpeg';
+import img15 from '@/assets/images/Siler/img15.jpeg';
+import img16 from '@/assets/images/Siler/img16.jpeg';
+import img17 from '@/assets/images/Siler/img17.jpeg';
+import img18 from '@/assets/images/Siler/img18.jpeg';
+import img19 from '@/assets/images/Siler/img19.jpeg';
+import img20 from '@/assets/images/Siler/img20.jpeg';
 import book2 from '@/assets/images/Service/book2.jpeg';
 import '@/index.css';
 
@@ -28,56 +47,56 @@ const SliderPage = () => {
       <div className="flex justify-center items-center">
         <div className="flex overflow-hidden relative mb-5 w-full h-[200px]">
           <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide1}>
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
+            <img className="w-48" src={img1} />
+            <img className="w-48" src={img2} />
+            <img className="w-48" src={img3} />
+            <img className="w-48" src={img4} />
+            <img className="w-48" src={img5} />
+            <img className="w-48" src={img6} />
+            <img className="w-48" src={img7} />
+            <img className="w-48" src={img8} />
+            <img className="w-48" src={img9} />
+            <img className="w-48" src={img10} />
           </div>
           <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide2}>
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
+            <img className="w-48" src={img1} />
+            <img className="w-48" src={img2} />
+            <img className="w-48" src={img3} />
+            <img className="w-48" src={img4} />
+            <img className="w-48" src={img5} />
+            <img className="w-48" src={img6} />
+            <img className="w-48" src={img7} />
+            <img className="w-48" src={img8} />
+            <img className="w-48" src={img9} />
+            <img className="w-48" src={img10} />
           </div>
         </div>
       </div>
       <div className="flex justify-center items-center mt-4">
         <div className="flex overflow-hidden relative mb-5 w-full h-[200px]">
           <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide3}>
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
+            <img className="w-48" src={img11} />
+            <img className="w-48" src={img12} />
+            <img className="w-48" src={img13} />
+            <img className="w-48" src={img14} />
+            <img className="w-48" src={img15} />
+            <img className="w-48" src={img16} />
+            <img className="w-48" src={img17} />
+            <img className="w-48" src={img18} />
+            <img className="w-48" src={img19} />
+            <img className="w-48" src={img20} />
           </div>
           <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide4}>
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book1} />
-            <img className="w-48" src={book2} />
+            <img className="w-48" src={img11} />
+            <img className="w-48" src={img12} />
+            <img className="w-48" src={img13} />
+            <img className="w-48" src={img14} />
+            <img className="w-48" src={img15} />
+            <img className="w-48" src={img16} />
+            <img className="w-48" src={img17} />
+            <img className="w-48" src={img18} />
+            <img className="w-48" src={img19} />
+            <img className="w-48" src={img20} />
           </div>
         </div>
       </div>
