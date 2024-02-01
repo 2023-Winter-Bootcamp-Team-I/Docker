@@ -30,7 +30,7 @@ SECRET_KEY = get_secret("DJANGO_SECRET_KEY")
 DEBUG = True
 
 # * 제거하기
-ALLOWED_HOSTS = ['3.36.154.184', 'bookg.site','*']
+ALLOWED_HOSTS = ['3.36.154.184', 'bookg.site', '*']
 
 # Application definition
 

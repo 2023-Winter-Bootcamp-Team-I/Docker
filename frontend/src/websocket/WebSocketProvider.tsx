@@ -27,7 +27,7 @@ export const WebSocketProvider: React.FC<{ children: ReactNode }> = ({ children 
   useEffect(() => {
     // const ws = new WebSocket('ws://localhost:8000/ws/books/');
     const ws = new WebSocket(
-      import.meta.env.MODE !== 'production' ? 'ws://localhost:8000/ws/books/' : `ws://${window.location.host}/ws/books/`
+      import.meta.env.MODE !== 'production' ? 'ws://localhost:8000/ws/books/' : `wss://${window.location.host}/ws/books/`
     );
 
     ws.onopen = () => {
