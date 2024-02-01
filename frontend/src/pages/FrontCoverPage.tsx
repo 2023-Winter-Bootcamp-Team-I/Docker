@@ -53,7 +53,7 @@ function FrontCoverPage() {
   }, [selectedLanguage, setUserLang]);
 
   return (
-    <div className="flex flex-col bg-mainColor bg-opacity-50 relative z-10">
+    <div className="flex flex-col bg-[#f0f0f0] bg-opacity-60 relative z-10">
       <NavBar />
       <div className="w-screen h-screen">
         <button

@@ -51,7 +51,7 @@ function CreationStartPage() {
     setUserLang(selectedLanguage);
     i18n.changeLanguage(selectedLanguage);
   }, [selectedLanguage, setUserLang]);
-
+  // xl:w-9/12 lg:h-[75%] 2xl:h-5/6 2xl:w-8/12 md:w-10/12 w-10/12 h-5/6
   return (
     <div className="w-screen h-screen">
       <div className="h-full flex flex-col justify-center items-center bg-mainColor bg-opacity-15 z-10">
