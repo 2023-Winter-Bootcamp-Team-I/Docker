@@ -93,20 +93,20 @@ const LibraryPage = () => {
           <div className="flex flex-row justify-between mb-1">
             <Link to="/">
               <button>
-                <img src={homeicon} className="h-[6.5rem] w-[8.5rem] -mt-6 -ml-8 hover:scale-125" />
+                <img src={homeicon} className="h-[6.5rem] w-[8.5rem] right-72 -mt-6 -ml-8 relative hover:scale-125" />
               </button>
             </Link>
-            <div className="flex flex-row gap-8 font-[Jua] text-[1.7rem] -mr-8 ">
+            <div className="flex flex-row gap-8 font-[Jua] text-[1.7rem] -mr-8 left-64 relative ">
               <button
                 onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
-                className="flex gap-2 w-[11rem] h-[3.5rem] bg-white pt-1 pl-1 rounded-3xl border-[#d1d1d1] border-b-8 border-r-4 hover:scale-110"
+                className="flex gap-2 w-[10rem] h-[3rem] bg-white  pl-1 rounded-3xl border-[#d1d1d1] border-b-8 border-r-4 hover:scale-110"
               >
                 <img src={translation} className="pl-2 -mt-0.5 pt" />
                 <p className="text-[#1D92FF] mt-2">{t('languageSelection')}</p>
               </button>
               <Link to="/">
                 <button
-                  className="w-[11rem] h-[3.5rem] bg-mainBlue pt-2 pl-1 text-white rounded-3xl border-[#4695D9] border-b-8 border-r-4 hover:scale-110"
+                  className="w-[10rem] h-[3rem] bg-mainBlue pt-1 pl-1 text-white rounded-3xl border-[#4695D9] border-b-8 border-r-4 hover:scale-110"
                   onClick={handleLogout}
                 >
                   {t('logout')}
