@@ -157,7 +157,7 @@ class EmailBookShare(APIView):
             take = serializer.validated_data['to']           # 받는 사람
             book_id = serializer.validated_data['book_id']
 
-            url = "http://bookg/api/v1/books/"
+            url = "https://bookg.site/mybook/"
             url_detail = url + f"{book_id}"
             subject = "소중한 책 선물"                         # 메일 제목
             from_email = "kjy154969@naver.com"               # 보내는 사람
