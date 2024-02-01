@@ -4,8 +4,8 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import mainPageImg from '@/assets/images/mainPage.png';
-// import createInfoPageImg from '@/assets/images/CreateInfoPage.png';
-// import createBookPageImg from '@/assets/images/CreateBookPage.png';
+import createInfoPageImg from '@/assets/images/CreateInfoPage.png';
+import createBookPageImg from '@/assets/images/CreateBookPage.png';
 
 interface TabPanelProps {
   children?: React.ReactNode;
