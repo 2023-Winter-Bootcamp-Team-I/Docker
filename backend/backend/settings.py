@@ -8,7 +8,6 @@ from pathlib import Path
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
 secret_file = os.path.join(BASE_DIR, 'secrets.json')
 
 with open(secret_file) as f:
