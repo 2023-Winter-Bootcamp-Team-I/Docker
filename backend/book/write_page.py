@@ -162,7 +162,7 @@ class WritePage(WebsocketConsumer):
         self.conversation = [
             {
                 "role": "system",
-                "content": f"Please act like a woman teacher who reads books."
+                "content": f"Please just act as a book that generates content as requested by the user."
             },{
                 "role": "user",
                 "content": f"<Initial Information> "
@@ -184,7 +184,7 @@ class WritePage(WebsocketConsumer):
         self.conversation = [
             {
                 "role": "system",
-                "content": f"Please act like a woman teacher who reads books."
+                "content": f"Please just act as a book that generates content as requested by the user."
             },{
                 "role": "user",
                 "content": f"<Previous Story Information>"
@@ -204,7 +204,7 @@ class WritePage(WebsocketConsumer):
         self.conversation = [
             {
                 "role": "system",
-                "content": f"Act like a female teacher who finishes the story of a book superbly."
+                "content": f"Please just act as a book that generates content as requested by the user."
             },{
                 "role": "user",
                 "content": f"<Previous Story Information>"
