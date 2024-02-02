@@ -10,6 +10,7 @@ import englishContentPageImg from '@/assets/images/englishContentPageImg.png';
 import shareImg from '@/assets/images/shareImg.png';
 import storyChoiceImg from '@/assets/images/storyChoiceImg.png';
 import myLibraryPageImg from '@/assets/images/myLibraryPageImg.png';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -67,13 +68,20 @@ export default function AboutUsPage() {
   return (
     <div className="flex bg-linear-gradient-about h-screen w-screen items-center justify-center">
       <div className="flex flex-col">
-        <div className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[LM] -mb-32">
-          <p className="mb-3">
-            북그북그에서
-            <br />
-          </p>
-          <p>책을 그려보세요 </p>
-        </div>
+        <AnimatePresence>
+          <motion.div
+            className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[LM] -mb-32"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 3 }}
+          >
+            <p className="mb-3">
+              북그북그에서
+              <br />
+            </p>
+            <p>책을 그려보세요 </p>
+          </motion.div>
+        </AnimatePresence>
         <div className="flex items-center justify-center h-screen">
           <Box
             sx={{

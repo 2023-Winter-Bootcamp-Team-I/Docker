@@ -19,6 +19,7 @@ import img18 from '@/assets/images/Siler/img18.jpeg';
 import img19 from '@/assets/images/Siler/img19.jpeg';
 import img20 from '@/assets/images/Siler/img20.jpeg';
 import '@/index.css';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const SliderPage = () => {
   const imgslide1 = {
@@ -36,13 +37,20 @@ const SliderPage = () => {
 
   return (
     <div className="flex flex-col w-screen h-screen bg-[#DAEAFF] py-40">
-      <div className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[LM] mb-20">
-        <p className="mb-3">
-          북그북그에서 만나는
-          <br />
-        </p>
-        <p>다양한 그림</p>
-      </div>
+      <AnimatePresence>
+        <motion.div
+          className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[LM] mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 3 }}
+        >
+          <p className="mb-3">
+            북그북그에서 만나는
+            <br />
+          </p>
+          <p>다양한 그림</p>
+        </motion.div>
+      </AnimatePresence>
       <div className="flex justify-center items-center">
         <div className="flex overflow-hidden relative mb-5 w-[1280px] 2xl:w-full h-[200px]">
           <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide1}>

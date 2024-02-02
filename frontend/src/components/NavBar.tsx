@@ -54,8 +54,8 @@ function NavBar() {
                 onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
                 className="flex gap-2 w-[9rem] h-[3rem] bg-[#397acf] pl-1 text-white rounded-[20px] border-[#4071a8] font-[LM]  border-b-4 border-r-4 hover:scale-110"
               >
-                <BsTranslate className="w-[3rem] pl-3 mt-2 pt text-[#305eb3]" />
-                <p className="text-[#397acf] mt-3 text-[1.3rem]">{t('languageSelection')}</p>
+                <BsTranslate className="w-[3rem] pl-3 mt-2 pt text-white" />
+                <p className="text-white mt-3 text-[1.3rem]">{t('languageSelection')}</p>
               </button>
             </div>
           </div>
