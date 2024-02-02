@@ -62,7 +62,7 @@ function FrontCoverPage() {
         >
           <img className="flex w-20 z-20 mx-auto -ml-[0.01px] mt-[0.02px] my-0" src={prevButtonImg} alt="prev_button" />
         </button>
-        <div className="flex flex-row w-9/12 mx-auto my-0 px-10 mt-6 z-20">
+        <div className="flex flex-row w-9/12 mx-auto my-0 px-10 mt-0 2xl:mt-12 z-20">
           {bookData && (
             <HTMLFlipBook
               width={1200}
@@ -73,7 +73,7 @@ function FrontCoverPage() {
               minHeight={700}
               maxHeight={1200}
               drawShadow={true}
-              flippingTime={1000}
+              flippingTime={700}
               className="book-theme"
               startPage={1}
               usePortrait={true}
@@ -101,7 +101,7 @@ function FrontCoverPage() {
                 </div>
               </div>
 
-              <div className="flex w-full h-[730px] pl-10">
+              <div className="flex w-full h-[620px] 2xl:h-[650px] pl-10">
                 <FrontCover title={bookData.bookTitle}></FrontCover>
               </div>
 
@@ -111,7 +111,7 @@ function FrontCoverPage() {
                 </div>
               ))}
 
-              <div className="flex w-full h-[730px] pl-10">
+              <div className="flex w-full h-[620px] 2xl:h-[650px] pl-10">
                 <BackCover></BackCover>
               </div>
             </HTMLFlipBook>
@@ -132,7 +132,7 @@ export default FrontCoverPage;
 
 const BackCover = React.forwardRef(() => {
   return (
-    <div className="flex h-[700px] pb-6">
+    <div className="flex h-[620px] 2xl:h-[650px] pb-6">
       <div className="flex bg-bookCoverBack h-full w-full rounded-2xl">
         <div className="flex flex-col bg-bookCoverFront h-full w-full mt-5 z-20 ml-5 -mr-6 rounded-2xl gap-8 items-end ">
           <div className="bg-bookCoverLine h-1/5 w-full mt-[55%]"></div>

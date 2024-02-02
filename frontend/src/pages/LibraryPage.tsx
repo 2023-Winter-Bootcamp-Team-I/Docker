@@ -10,6 +10,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { LuShare } from 'react-icons/lu';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
+import line from '@/assets/images/Library/line.png';
+import jelly1 from '@/assets/images/Background/jelly-beans 1.svg';
+import jelly4 from '@/assets/images/Background/jelly-beans 4.svg';
+import jelly6 from '@/assets/images/Background/jelly-beans 6.svg';
 
 const LibraryPage = () => {
   const [hovered, setHovered] = useState<{ [key: number]: boolean }>({});
@@ -87,19 +91,27 @@ const LibraryPage = () => {
 
   return (
     <>
-      <div className="flex flex-col w-screen h-screen bg-mainColor bg-opacity-15 relative z-10">
-        <div className=" shadow-[inset_0px_4px_15px_0px_rgba(0,0,0,0.25)] w-screen h-40 bg-mainBlue absolute top-[9rem] z-20" />
-        <div className="w-[1200px] mx-auto mt-8">
+      <div className="flex flex-row w-screen h-screen bg-mainColor bg-opacity-30 relative z-10">
+        <img src={jelly1} className="absolute z-10 top-0 left-12 w-40 h-24 rotate-0" />
+        <img src={jelly4} className="absolute z-10 top-80 left-0 w-32 h-36" />
+        <img src={jelly6} className="absolute z-10 bottom-0 left-12 w-56 h-36" />
+        <img src={line} className="flex absolute left-0 top-0 h-[100%] z-0" />
+        <div className="flex w-[12%] h-screen bg-[#e0edff] bg-opacity-40 absolute z-10" />
+        {/* <div className=" shadow-[inset_0px_4px_15px_0px_rgba(0,0,0,0.25)] w-screen h-40 bg-mainBlue absolute top-[9rem] z-20" /> */}
+        <div className="w-[1200px] 2xl:w-[1350px] mx-auto mt-8">
           <div className="flex flex-row justify-between mb-1">
             <Link to="/">
               <button>
-                <img src={homeicon} className="h-[6.5rem] w-[8.5rem] right-72 -mt-6 -ml-8 relative hover:scale-125" />
+                <img
+                  src={homeicon}
+                  className="h-[6.5rem] w-[8.5rem] z-50 right-72 -mt-6 -ml-8 relative hover:scale-125"
+                />
               </button>
             </Link>
             <div className="flex flex-row gap-8 font-[Jua] text-[1.7rem] -mr-8 left-64 relative ">
               <button
                 onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
-                className="flex gap-2 w-[10rem] h-[3rem] bg-white  pl-1 rounded-3xl border-[#d1d1d1] border-b-8 border-r-4 hover:scale-110"
+                className="flex gap-2 w-[10rem] h-[3rem] bg-white  pl-1 rounded-3xl border-[#d1d1d1] border-b-4 border-r-4 hover:scale-110"
               >
                 <img src={translation} className="pl-2 -mt-0.5 pt" />
                 <p className="text-[#1D92FF] mt-2">{t('languageSelection')}</p>
@@ -115,7 +127,7 @@ const LibraryPage = () => {
             </div>
           </div>
           <div className="relative z-30 ">
-            <div className="font-dongle text-[120px] text-[#F1F1F1] ml-8 mt-12 drop-shadow-[2px_3px_0px_rgba(0,0,0,0.35)]">
+            <div className="font-[LM] text-[60px] text-[#305eb3] ml-8 mt-12 drop-shadow-[1px_1px_0px_rgba(0,16,60,0.35)]">
               <div>{t('library')}</div>
             </div>
             <div className="flex overflow-x-auto overflow-y-hidden m-12 gap-16 scrollbar-thumb-[#5da6ff] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#37caff] scrollbar">
@@ -123,7 +135,7 @@ const LibraryPage = () => {
                 .slice()
                 .reverse()
                 .map((book) => (
-                  <div className="flex-col w-64 h-[21rem] bg-[#f2f2f2] bg-opacity-65 rounded-2xl mt-4 mb-10 hover:bg-[#fbfbfb] hover:shadow-[3px_3px_0px_rgba(0,0,0,0.35)]">
+                  <div className="flex-col w-64 h-[21rem] bg-[#fcfcfc] bg-opacity-95 rounded-2xl mt-4 mb-10 hover:bg-[#ffffff] hover:shadow-[3px_3px_1px_rgba(0,0,0,0.35)]">
                     <div className="w-64 h-64">
                       <button onClick={() => navigateToPage(book.book_id)}>
                         <img src={book.image_url} className="rounded-t-2xl" />
@@ -162,11 +174,11 @@ const LibraryPage = () => {
                         </svg>
                       </div>
                     </div>
-                    {showModal && <ShareModal closeModal={closeModal} bookId={currentBookId} />}
                   </div>
                 ))}
             </div>
           </div>
+
           <div className="absolute bottom-10 right-10 flex items-end justify-end w-[7rem] h-[7rem] rounded-full bg-[#309CFF] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
             <div className="mb-3 mr-1">
               <Link to="/bookguide">
@@ -175,6 +187,7 @@ const LibraryPage = () => {
             </div>
           </div>
         </div>
+        {showModal && <ShareModal closeModal={closeModal} bookId={currentBookId} />}
       </div>
     </>
   );
