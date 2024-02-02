@@ -54,7 +54,7 @@ function LogInModal({ closeModal }: LogInModalProps) {
     <AnimatePresence>
       {isModalOpen && (
         <motion.div
-          className="z-10 absolute w-screen h-screen bg-mainColor bg-opacity-60 pt-10"
+          className="z-50 absolute w-screen h-screen bg-mainColor bg-opacity-60 pt-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

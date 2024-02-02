@@ -91,7 +91,7 @@ const MainPage = () => {
               ) : (
                 <motion.button
                   onClick={openModal}
-                  className="w-[13rem] h-[4.5rem] bg-mainBlue pt-2 text-[2rem] rounded-3xl border-[#4695D9] border-b-8 border-r-4 hover:bg-[#179EFF]"
+                  className="w-[13rem] h-[4.5rem] bg-mainBlue pt-2 text-[2rem] rounded-3xl border-[#4695D9] border-b-8 border-r-4 hover:bg-[#179EFF] z-50"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.7 }}
                 >

@@ -48,7 +48,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
     <AnimatePresence>
       {isModalOpen && (
         <motion.div
-          className="absolute z-1000 top-0 left-0 w-screen h-screen flex items-center justify-center bg-mainColor bg-opacity-30"
+          className="absolute z-50 top-0 left-0 w-screen h-screen flex items-center justify-center bg-mainColor bg-opacity-30"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
