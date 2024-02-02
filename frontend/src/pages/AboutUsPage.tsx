@@ -32,7 +32,7 @@ function TabPanel(props: TabPanelProps) {
       {value === index && (
         <Box sx={{ p: 3 }}>
           {/* <Typography variant="h6" fontWeight="bold"> */}
-          <Typography fontWeight="" sx={{ fontSize: '1.3rem' }} className="font-jua">
+          <Typography fontWeight="" sx={{ fontSize: '1.3rem' }} className="font-[PR2]">
             {children}
           </Typography>
         </Box>
@@ -101,7 +101,7 @@ export default function AboutUsPage() {
                 </TabPanel>
               </div>
               <div className="flex flex-col gap-y-10 w-[400px]">
-                <div className="flex items-left justify-left font-jua text-4xl -ml-2"></div>
+                <div className="flex items-left justify-left font-[PR2] text-4xl -ml-2"></div>
                 <div className="flex flex-row">
                   <div className="flex">
                     <Tabs
@@ -116,9 +116,9 @@ export default function AboutUsPage() {
                           label="동화책 만드는 방법"
                           {...a11yProps(0)}
                           style={{
-                            fontSize: '2.3rem',
+                            fontSize: '2rem',
                             fontWeight: 'bold',
-                            fontFamily: 'jua',
+                            fontFamily: 'LM',
                             color: '#000000',
                           }}
                         />
@@ -129,15 +129,15 @@ export default function AboutUsPage() {
                           label="동화책 주인공 설정"
                           {...a11yProps(1)}
                           style={{
-                            fontSize: '2rem',
+                            fontSize: '1.5rem',
                             fontWeight: 'bold',
-                            fontFamily: 'jua',
-                            color: value === 1 ? '#0452C6' : 'black',
+                            fontFamily: 'LM',
+                            color: value === 1 ? '#001aff' : 'black',
                           }}
                         />
                       </div>
                       {value === 1 && (
-                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-4 mt-2">
+                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
                           동화책 주인공을 설정합니다 생성된 두가지의 스토리 중 하나를 선택합니다
                         </div>
                       )}
@@ -146,15 +146,15 @@ export default function AboutUsPage() {
                           label="글 선택하기"
                           {...a11yProps(2)}
                           style={{
-                            fontSize: '2rem',
+                            fontSize: '1.5rem',
                             fontWeight: 'bold',
-                            fontFamily: 'jua',
-                            color: value === 2 ? '#0452C6' : 'black',
+                            fontFamily: 'LM',
+                            color: value === 2 ? '#001aff' : 'black',
                           }}
                         />
                       </div>
                       {value === 2 && (
-                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-4 mt-2">
+                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
                           인공지능이 생성한 두가지의 이야기 중 하나를 선택합니다
                         </div>
                       )}
@@ -163,15 +163,15 @@ export default function AboutUsPage() {
                           label="그림과 함께 책 읽기"
                           {...a11yProps(3)}
                           style={{
-                            fontSize: '2rem',
+                            fontSize: '1.5rem',
                             fontWeight: 'bold',
-                            fontFamily: 'jua',
-                            color: value === 3 ? '#0452C6' : 'black',
+                            fontFamily: 'LM',
+                            color: value === 3 ? '#001aff' : 'black',
                           }}
                         />
                       </div>
                       {value === 3 && (
-                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-4 mt-2">
+                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
                           인공지능이 그려준 그림과 함께 책을 읽을 수 있습니다
                         </div>
                       )}
@@ -180,15 +180,15 @@ export default function AboutUsPage() {
                           label="목소리와 함께 책 읽기"
                           {...a11yProps(4)}
                           style={{
-                            fontSize: '2rem',
+                            fontSize: '1.5rem',
                             fontWeight: 'bold',
-                            fontFamily: 'jua',
-                            color: value === 4 ? '#0452C6' : 'black',
+                            fontFamily: 'LM',
+                            color: value === 4 ? '#001aff' : 'black',
                           }}
                         />
                       </div>
                       {value === 4 && (
-                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-4 mt-2">
+                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
                           음성 지원으로 생성된 책을 들으며 읽을 수 있습니다
                         </div>
                       )}
@@ -197,15 +197,15 @@ export default function AboutUsPage() {
                           label="동화책 공유"
                           {...a11yProps(5)}
                           style={{
-                            fontSize: '2rem',
+                            fontSize: '1.5rem',
                             fontWeight: 'bold',
-                            fontFamily: 'jua',
-                            color: value === 5 ? '#0452C6' : 'black',
+                            fontFamily: 'LM',
+                            color: value === 5 ? '#001aff' : 'black',
                           }}
                         />
                       </div>
                       {value === 5 && (
-                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-4 mt-2">
+                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
                           친구와 함께 내가 만든 책을 공유 할 수 있습니다
                         </div>
                       )}
@@ -214,15 +214,15 @@ export default function AboutUsPage() {
                           label="한/영 모두 지원"
                           {...a11yProps(6)}
                           style={{
-                            fontSize: '2rem',
+                            fontSize: '1.5rem',
                             fontWeight: 'bold',
-                            fontFamily: 'jua',
-                            color: value === 6 ? '#0452C6' : 'black',
+                            fontFamily: 'LM',
+                            color: value === 6 ? '#001aff' : 'black',
                           }}
                         />
                       </div>
                       {value === 6 && (
-                        <div className="text-[1.3rem] font-jua mr-6 pl-10 mb-4 mt-2">
+                        <div className="text-[1.3rem] font-[PR2] text-[#f3f3f3] mr-6 pl-10 mb-4 mt-2">
                           모든 기능은 한국어와 영어 두가지 언어로 제공 됩니다
                         </div>
                       )}
@@ -232,9 +232,9 @@ export default function AboutUsPage() {
                           label=""
                           {...a11yProps(7)}
                           style={{
-                            fontSize: '2rem',
+                            fontSize: '1.5rem',
                             fontWeight: 'bold',
-                            fontFamily: 'jua',
+                            fontFamily: '[PR2]',
                           }}
                         />
                       </div>

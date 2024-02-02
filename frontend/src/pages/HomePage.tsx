@@ -8,6 +8,9 @@ import { userLanguage, userIDState } from '@/states/atom';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
 import shy from '@/assets/images/shy.svg';
+import AboutUsPage from './AboutUsPage';
+import SliderPage from './SliderPage';
+import ServicePage from './ServicePage';
 
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -70,7 +73,7 @@ const HomePage = () => {
             {userID ? (
               <Link to="/library">
                 <motion.button
-                  className="w-[13rem] h-[4.5rem] text-white bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#305eb3] border-b-8 border-r-4 hover:bg-[#4570c0] hover:scale-110"
+                  className="w-[13rem] h-[4.5rem] pb-1 pl-1 text-white bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#305eb3] border-b-8 border-r-4 hover:bg-[#4570c0] hover:scale-110"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.7 }}
                 >
@@ -80,7 +83,7 @@ const HomePage = () => {
             ) : (
               <motion.button
                 onClick={openModal}
-                className="w-[13rem] h-[4.5rem] text-white bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#505050] border-b-8 border-r-4 hover:bg-[#305eb3]"
+                className="w-[13rem] h-[4.5rem] text-white pb-1 pl-1 bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#505050] border-b-8 border-r-4 hover:bg-[#305eb3]"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.7 }}
               >
@@ -90,7 +93,7 @@ const HomePage = () => {
             {userID ? (
               <Link to="/">
                 <motion.button
-                  className=" w-[13rem] h-[4.5rem] bg-[#F1F1F1] text-[#305eb3] pt-2 text-[2rem] rounded-3xl border-[#d5d5d5] border-b-8 border-r-4 hover:bg-[#ffffff] hover:scale-110"
+                  className=" w-[13rem] h-[4.5rem] bg-[#F1F1F1] pb-1 pl-1 text-[#305eb3] pt-2 text-[2rem] rounded-3xl border-[#d5d5d5] border-b-8 border-r-4 hover:bg-[#ffffff] hover:scale-110"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.7 }}
                   onClick={handleLogout}
@@ -101,7 +104,7 @@ const HomePage = () => {
             ) : (
               <Link to="/signup">
                 <motion.button
-                  className=" w-[13rem] h-[4.5rem] bg-[#F1F1F1] text-mainBlue pt-2 text-[2rem] rounded-3xl border-[#d5d5d5] border-b-8 border-r-4 hover:scale-110 hover:bg-[#ffffff]"
+                  className=" w-[13rem] h-[4.5rem] bg-[#F1F1F1] pb-1 pl-1 text-mainBlue pt-2 text-[2rem] rounded-3xl border-[#d5d5d5] border-b-8 border-r-4 hover:scale-110 hover:bg-[#ffffff]"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.7 }}
                 >
@@ -121,9 +124,13 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <div className="absolute z-60 top-[83.1%] bg-[#A1C9FF] w-screen h-[9rem]"></div>
+      <div className="absolute z-60 top-[85%] bg-[#a8cdff] w-[100%] h-[9rem]"></div>
 
       {showModal && <LogInModal closeModal={closeModal} />}
+
+      <ServicePage />
+      <SliderPage />
+      <AboutUsPage />
     </div>
   );
 };

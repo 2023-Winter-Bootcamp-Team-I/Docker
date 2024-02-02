@@ -35,8 +35,8 @@ const SliderPage = () => {
   };
 
   return (
-    <div className="flex flex-col w-screen h-screen bg-[#DAEAFF] -mb-64">
-      <div className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[jua] mb-12">
+    <div className="flex flex-col w-screen h-screen bg-[#DAEAFF] py-40">
+      <div className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[LM] mb-20">
         <p className="mb-3">
           북그북그에서 만나는
           <br />
@@ -44,58 +44,58 @@ const SliderPage = () => {
         <p>다양한 그림</p>
       </div>
       <div className="flex justify-center items-center">
-        <div className="flex overflow-hidden relative mb-5 w-full h-[200px]">
+        <div className="flex overflow-hidden relative mb-5 w-[1280px] 2xl:w-full h-[200px]">
           <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide1}>
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img1} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img2} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img3} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img4} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img5} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img6} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img7} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img8} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img9} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img10} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img1} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img2} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img3} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img4} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img5} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img6} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img7} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img8} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img9} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img10} />
           </div>
-          <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide2}>
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img1} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img2} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img3} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img4} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img5} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img6} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img7} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img8} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img9} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img10} />
+          <div className="flex flex-row absolute flex-nowrap mb-5 w-[1280px] 2xl:w-full h-fit gap-8" style={imgslide2}>
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img1} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img2} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img3} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img4} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img5} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img6} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img7} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img8} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img9} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img10} />
           </div>
         </div>
       </div>
       <div className="flex justify-center items-center mt-4">
-        <div className="flex overflow-hidden relative mb-5 w-full h-[200px]">
+        <div className="flex overflow-hidden relative mb-5 w-[1280px] 2xl:w-full h-[200px]">
           <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide3}>
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img11} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img12} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img13} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img14} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img15} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img16} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img17} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img18} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img19} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img20} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img11} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img12} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img13} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img14} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img15} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img16} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img17} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img18} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img19} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img20} />
           </div>
-          <div className="flex flex-row absolute flex-nowrap mb-5 w-full h-fit gap-8" style={imgslide4}>
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img11} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img12} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img13} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img14} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img15} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img16} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img17} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img18} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img19} />
-            <img className="w-48 shadow-[10px_30px_10px_-5px_rgba(0,0,0,0.3)]" src={img20} />
+          <div className="flex flex-row absolute flex-nowrap mb-5 w-[1280px] 2xl:w-full h-fit gap-8" style={imgslide4}>
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img11} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img12} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img13} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img14} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img15} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img16} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img17} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img18} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img19} />
+            <img className="w-48 shadow-[10px_10px_7px_-5px_rgba(0,0,0,0.25)]" src={img20} />
           </div>
         </div>
       </div>
