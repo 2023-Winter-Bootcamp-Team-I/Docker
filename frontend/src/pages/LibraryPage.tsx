@@ -1,5 +1,5 @@
 import homeicon from '@/assets/images/Library/Home Page.svg';
-import translation from '@/assets/images/Library/Translation.svg';
+import { BsTranslate } from 'react-icons/bs';
 import addbook from '@/assets/images/Library/addbook.svg';
 import { useState, useEffect } from 'react';
 import { Book, getBooks, deleteBook } from '@/api/books';
@@ -104,21 +104,21 @@ const LibraryPage = () => {
               <button>
                 <img
                   src={homeicon}
-                  className="h-[6.5rem] w-[8.5rem] z-50 right-72 -mt-6 -ml-8 relative hover:scale-125"
+                  className="h-[6.5rem] w-[6.5rem] ml-44 z-50 right-72 -mt-6 relative hover:scale-125"
                 />
               </button>
             </Link>
-            <div className="flex flex-row gap-8 font-[Jua] text-[1.7rem] -mr-8 left-64 relative ">
+            <div className="flex flex-row gap-8 font-[Jua] text-[1.7rem]  left-44 relative ">
               <button
                 onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
-                className="flex gap-2 w-[10rem] h-[3rem] bg-white  pl-1 rounded-3xl border-[#d1d1d1] border-b-4 border-r-4 hover:scale-110"
+                className="flex gap-2 w-[9rem] h-[3rem] bg-[white]  pl-1 rounded-3xl font-[LM] border-[#d1d1d1] border-b-4 border-r-4 hover:scale-110"
               >
-                <img src={translation} className="pl-2 -mt-0.5 pt" />
-                <p className="text-[#1D92FF] mt-2">{t('languageSelection')}</p>
+                <BsTranslate className="w-[3rem] pl-3 mt-2 pt text-[#305eb3]" />
+                <p className="text-[#397acf] mt-3 text-[1.3rem]">{t('languageSelection')}</p>
               </button>
               <Link to="/">
                 <button
-                  className="w-[10rem] h-[3rem] bg-mainBlue pt-1 pl-1 text-white rounded-3xl border-[#4695D9] border-b-8 border-r-4 hover:scale-110"
+                  className="w-[9rem] h-[3rem] bg-[#397acf] pt-1 pl-1 text-[1.3rem] font-[LM] text-white rounded-3xl border-[#4071a8] border-b-4 border-r-4 hover:scale-110"
                   onClick={handleLogout}
                 >
                   {t('logout')}
@@ -179,8 +179,8 @@ const LibraryPage = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-10 right-10 flex items-end justify-end w-[7rem] h-[7rem] rounded-full bg-[#309CFF] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
-            <div className="mb-3 mr-1">
+          <div className="absolute bottom-10 right-10 flex items-end justify-end w-[8rem] h-[8rem] rounded-full bg-[#556df5] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
+            <div className="w-[70%] mb-5 mr-2">
               <Link to="/bookguide">
                 <img src={addbook} alt="Add Book Icon" />
               </Link>
