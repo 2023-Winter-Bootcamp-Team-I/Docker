@@ -54,16 +54,16 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <button onClick={closeModal}>
-            <img className="flex left-[69%] top-[30%] absolute z-40 " src={Close} alt="close_button" />
-          </button>
-          <div className="bg-[#aac8f3] w-[55rem] h-[25rem] rounded-xl flex flex-col z-20 justify-between">
-            <div className="flex flex-col justify-center items-center ">
-              <div className="flex  gap-4 -ml-28">
-                <img src={letter2} className="flex -mb-20  mr-10 scale-110" />
-                <p className="font-jua mt-20 text-[#4a8cff] text-[2.7rem]">완성한 동화책을 공유해봐!</p>
+          <div className="bg-[rgb(206,226,255)] relative w-[48rem] h-[25rem] rounded-xl flex items-center z-20 justify-center border-[3px] border-[#daeaff] border-solid">
+            <button onClick={closeModal}>
+              <img className="flex absolute top-4 right-4 w-8 h-8 z-40 " src={Close} alt="close_button" />
+            </button>
+            <div className=" w-full h-full flex flex-col justify-center items-center -ml-8">
+              <div className="flex gap-4">
+                <img src={letter2} className="flex mt-8 mr-10 scale-110" />
+                <p className="font-[LM] mt-12 -ml-6 text-[#5b97ff] text-[2.5rem]">완성한 동화책을 공유해봐!</p>
               </div>
-              <div className="flex mt-12 ">
+              <div className="flex mt-8 ">
                 <input
                   id="email"
                   name="email"
@@ -72,18 +72,18 @@ const ShareModal: React.FC<ShareModalProps> = ({ closeModal, bookId }) => {
                   required
                   value={email}
                   onChange={handleEmailChange}
-                  className="w-[30rem] h-[4.2rem] text-xl  rounded-full px-6 border-2 border-shadowGray focus:outline-signupButtonBlue"
+                  className="w-[30rem] h-[4rem] text-xl rounded-full px-6 border-2 border-shadowGray focus:outline-signupButtonBlue"
                 />
               </div>
-              <div className="flex mb-[13vh] justify-center"></div>
-              <div className="flex flex-row gap-2 ml-2 justify-center -mt-16">
+              <div className="flex mb-12 justify-center"></div>
+              <div className="flex flex-row gap-2 ml-2 justify-center">
                 <Link to="/library">
                   <button
                     onClick={() => {
                       handleShareButtonClick();
                       closeModal();
                     }}
-                    className="w-[12rem] h-[4rem] text-[#EEEEEE] bg-[#5e99ff] pt-2 text-[1.8rem] rounded-3xl border-[#6091fd] border-b-8 border-r-4 hover:bg-[#447fff] font-jua hover:border-[#296dff]"
+                    className="w-[10.5rem] h-[3.5rem] text-[#EEEEEE] bg-[#5b97ff] pt-2 text-[1.5rem] rounded-3xl border-[#5389ff] border-b-8 border-r-4 hover:bg-[#4e8fff] font-[LM] hover:border-[#5b8fff]"
                   >
                     공유하기
                   </button>

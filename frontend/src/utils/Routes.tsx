@@ -3,7 +3,7 @@ import App from '@/App';
 import FrontCoverPage from '@/pages/FrontCoverPage';
 import BackCoverPage from '@/pages/BackCoverPage';
 import LibraryPage from '@/pages/LibraryPage';
-import MainPage from '@/pages/MainPage';
+// import MainPage from '@/pages/MainPage';
 import SignUp from '@/pages/SignUp';
 import { createBrowserRouter } from 'react-router-dom';
 import CreateBookPage from '@/pages/CreateBookPage';
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <MainPage />,
+        element: <HomePage />,
       },
       {
         path: 'home',
