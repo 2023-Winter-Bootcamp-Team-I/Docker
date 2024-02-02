@@ -124,7 +124,7 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <div className="absolute z-60 top-[85%] bg-[#a8cdff] w-[100%] h-[9rem]"></div>
+      <div className="absolute z-60 top-[88%] bg-[#a8cdff] w-[100%] h-[9rem]"></div>
 
       {showModal && <LogInModal closeModal={closeModal} />}
 
