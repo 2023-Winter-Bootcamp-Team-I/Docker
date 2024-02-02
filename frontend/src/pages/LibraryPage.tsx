@@ -108,7 +108,7 @@ const LibraryPage = () => {
                 />
               </button>
             </Link>
-            <div className="flex flex-row gap-8 font-[LM] text-[1.7rem] ml-20 relative ">
+            <div className="flex flex-row gap-8 font-[LM] text-[1.7rem]  relative ">
               <button
                 onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
                 className="flex gap-2 w-[9rem] h-[3rem] bg-[white]  pl-1 rounded-3xl font-[LM] border-[#d1d1d1] border-b-4 border-r-4 hover:scale-110"

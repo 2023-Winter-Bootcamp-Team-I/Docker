@@ -101,7 +101,7 @@ function FrontCoverPage() {
                 </div>
               </div>
 
-              <div className="flex w-full h-[620px] 2xl:h-[650px] pl-10">
+              <div className="flex w-full h-[650px] 2xl:h-[650px] pl-10">
                 <FrontCover title={bookData.bookTitle}></FrontCover>
               </div>
 
@@ -111,7 +111,7 @@ function FrontCoverPage() {
                 </div>
               ))}
 
-              <div className="flex w-full h-[620px] 2xl:h-[650px] pl-10">
+              <div className="flex w-full h-[650px] 2xl:h-[690px] pl-10">
                 <BackCover></BackCover>
               </div>
             </HTMLFlipBook>
@@ -132,7 +132,7 @@ export default FrontCoverPage;
 
 const BackCover = React.forwardRef(() => {
   return (
-    <div className="flex h-[620px] 2xl:h-[650px] pb-6">
+    <div className="flex h-[620px] 2xl:h-[690px] pb-6">
       <div className="flex bg-bookCoverBack h-full w-full rounded-2xl">
         <div className="flex flex-col bg-bookCoverFront h-full w-full mt-5 z-20 ml-5 -mr-6 rounded-2xl gap-8 items-end ">
           <div className="bg-bookCoverLine h-1/5 w-full mt-[55%]"></div>

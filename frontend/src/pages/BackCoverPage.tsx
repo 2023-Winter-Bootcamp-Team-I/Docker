@@ -3,10 +3,10 @@ import barcodeImg from '@/assets/images/barcode.svg';
 
 function BackCoverPage() {
   return (
-    <div className="w-screen h-[600px] bg-mainColor bg-opacity-15 relative z-10">
+    <div className="w-screen h-[620px] 2xl:h-[690px] bg-mainColor bg-opacity-15 relative z-10">
       <div className="flex flex-row w-[1500px] mx-auto my-0">
         <div className="flex basis-1/2 h-screen justify-center content-center">
-          <div className="flex bg-bookCoverBack h-[90%] w-[96%] mt-8 ml-24 rounded-3xl">
+          <div className="flex bg-[#5b91d3] h-[90%] w-[96%] mt-8 ml-24 rounded-3xl">
             <div className="flex flex-col bg-bookCoverFront h-full w-full mt-6 z-10 ml-6 -mr-6 rounded-3xl justify-center items-end ">
               <div className="relative bg-bookCoverLine h-1/5 w-full mt-[500px]"></div>
               <img className="z-20 w-80 mr-10 mt-16" src={barcodeImg} alt="robot_character" />
