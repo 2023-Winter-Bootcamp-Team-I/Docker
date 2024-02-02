@@ -108,7 +108,7 @@ const LibraryPage = () => {
                 />
               </button>
             </Link>
-            <div className="flex flex-row gap-8 font-[Jua] text-[1.7rem]  left-44 relative ">
+            <div className="flex flex-row gap-8 font-[LM] text-[1.7rem] ml-20 relative ">
               <button
                 onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
                 className="flex gap-2 w-[9rem] h-[3rem] bg-[white]  pl-1 rounded-3xl font-[LM] border-[#d1d1d1] border-b-4 border-r-4 hover:scale-110"
@@ -179,7 +179,7 @@ const LibraryPage = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-10 right-10 flex items-end justify-end w-[8rem] h-[8rem] rounded-full bg-[#556df5] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
+          <div className="absolute bottom-16 right-16 flex items-end justify-end w-[8rem] h-[8rem] rounded-full bg-[#ffffff] drop-shadow-[4px_4px_1px_rgba(0,0,0,0.35)] hover:scale-125 transition duration-300">
             <div className="w-[70%] mb-5 mr-2">
               <Link to="/bookguide">
                 <img src={addbook} alt="Add Book Icon" />
