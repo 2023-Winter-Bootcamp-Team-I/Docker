@@ -131,6 +131,12 @@ const HomePage = () => {
       <ServicePage />
       <SliderPage />
       <AboutUsPage />
+      {/* <footer className="bg-[#4a74c5] text-white p-10 text-center z-50"> */}
+      {/* <footer className="bg-[#3f6fbd] text-white p-10 text-center z-50"> */}
+      <footer className="bg-[#527dcf] text-white p-8 text-center z-50">
+        {/* <footer className="bg-[#3f6fbd] text-white p-10 text-center z-50"> */}
+        <p>&copy; 2024 Bookg. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

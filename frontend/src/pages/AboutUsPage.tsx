@@ -62,7 +62,14 @@ export default function AboutUsPage() {
 
   return (
     <div className="flex bg-linear-gradient-about h-screen w-screen items-center justify-center">
-      <div className="flex flex-col gap-y-16">
+      <div className="flex flex-col">
+        <div className="flex flex-col items-center text-[#000229] text-[3.2rem] font-[LM] -mb-32">
+          <p className="mb-3">
+            북그북그에서
+            <br />
+          </p>
+          <p>책을 그려보세요 </p>
+        </div>
         <div className="flex items-center justify-center h-screen">
           <Box
             sx={{
@@ -74,7 +81,7 @@ export default function AboutUsPage() {
             }}
           >
             <div className="flex flexrow gap-x-10">
-              <div className="flex items-center">
+              <div className="flex items-center mt-20">
                 <TabPanel value={value} index={0}>
                   <img src={createInfoPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
@@ -109,7 +116,7 @@ export default function AboutUsPage() {
                       value={value}
                       // onChange={handleChange}
                       aria-label="Vertical tabs example"
-                      sx={{ borderRight: 1, borderColor: 'divider' }}
+                      sx={{ borderRight: 1, borderColor: 'divider', width: '400px' }}
                     >
                       <div className="align-left" onClick={() => handleChange(0)}>
                         <Tab
@@ -138,7 +145,9 @@ export default function AboutUsPage() {
                       </div>
                       {value === 1 && (
                         <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
-                          동화책 주인공을 설정합니다 생성된 두가지의 스토리 중 하나를 선택합니다
+                          동화책 주인공을 만들어보고,
+                          <br></br>
+                          <br></br>그 중에 좋아하는 스토리를 선택해봐요!
                         </div>
                       )}
                       <div className="align-left" onClick={() => handleChange(2)}>
@@ -154,9 +163,7 @@ export default function AboutUsPage() {
                         />
                       </div>
                       {value === 2 && (
-                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
-                          인공지능이 생성한 두가지의 이야기 중 하나를 선택합니다
-                        </div>
+                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">원하는 이야기를 골라봐요!</div>
                       )}
                       <div className="align-left" onClick={() => handleChange(3)}>
                         <Tab
@@ -172,7 +179,7 @@ export default function AboutUsPage() {
                       </div>
                       {value === 3 && (
                         <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
-                          인공지능이 그려준 그림과 함께 책을 읽을 수 있습니다
+                          인공지능이 그려준 그림과 함께 책을 읽어요
                         </div>
                       )}
                       <div className="align-left" onClick={() => handleChange(4)}>
@@ -188,9 +195,7 @@ export default function AboutUsPage() {
                         />
                       </div>
                       {value === 4 && (
-                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
-                          음성 지원으로 생성된 책을 들으며 읽을 수 있습니다
-                        </div>
+                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">책을 읽어 줄 수도 있어요!</div>
                       )}
                       <div className="align-left" onClick={() => handleChange(5)}>
                         <Tab
@@ -206,7 +211,7 @@ export default function AboutUsPage() {
                       </div>
                       {value === 5 && (
                         <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
-                          친구와 함께 내가 만든 책을 공유 할 수 있습니다
+                          친구에게 내가 만든 책을 보여주세요
                         </div>
                       )}
                       <div className="align-left" onClick={() => handleChange(6)}>
@@ -222,22 +227,10 @@ export default function AboutUsPage() {
                         />
                       </div>
                       {value === 6 && (
-                        <div className="text-[1.3rem] font-[PR2] text-[#f3f3f3] mr-6 pl-10 mb-4 mt-2">
-                          모든 기능은 한국어와 영어 두가지 언어로 제공 됩니다
+                        <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
+                          한국어 영어 둘 다 듣고 읽을 수 있어요!
                         </div>
                       )}
-
-                      <div className="align-left" onClick={() => handleChange(7)}>
-                        <Tab
-                          label=""
-                          {...a11yProps(7)}
-                          style={{
-                            fontSize: '1.5rem',
-                            fontWeight: 'bold',
-                            fontFamily: '[PR2]',
-                          }}
-                        />
-                      </div>
                     </Tabs>
                   </div>
                   <div className="flex">

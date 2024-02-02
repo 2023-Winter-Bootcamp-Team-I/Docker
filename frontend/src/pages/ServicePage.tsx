@@ -92,10 +92,10 @@ export default function ServicePage() {
           </div>
           <div className="flex justify-around items-center bg-[#FCFCFC] bg-opacity-40 shadow-[3px_4px_4px_1px_rgba(0,0,0,0.20)] rounded-[1.5rem] px-4 w-[480px] h-[200px]">
             <div className="flex flex-col">
-              <p className="text-[#000000] font-[LM] text-3xl mb-1">이메일 공유</p>
+              <p className="text-[#000000] font-[LM] text-3xl mb-1">동화책 공유</p>
               <br />
-              <p className="text-[#656565] text-[1.1rem] mb-2">제작한 동화책을 오디오로 즐겨보세요.</p>
-              <p className="text-[#656565] text-[1.1rem]">AI가 한글과 영어 모두 편안하게 들려줄 거에요.</p>
+              <p className="text-[#656565] text-[1.1rem] mb-2">완성된 동화책을 이메일로 공유해보세요</p>
+              <p className="text-[#656565] text-[1.1rem]">친구들에게 내가 만든 동화책을 자랑해보아요</p>
             </div>
             <img src={email} className="w-[5.5rem] h-[5.5rem]" />
           </div>
