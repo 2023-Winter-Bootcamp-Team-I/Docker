@@ -11,7 +11,6 @@ import i18n from '@/i18n';
 import ServicePage from './ServicePage';
 import SliderPage from './SliderPage';
 import AboutUsPage from './AboutUsPage';
-import { Slider } from '@mui/material';
 // import ServicePage from './ServicePage';
 
 const MainPage = () => {
