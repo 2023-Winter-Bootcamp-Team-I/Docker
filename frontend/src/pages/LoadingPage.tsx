@@ -28,10 +28,12 @@ const LoadingPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-screen z-50 bg-mainColor">
-      <Lottie animationData={book} className="-mt-32" />
-      <p className="font-dongle text-white text-[2.5rem] -mt-32">{t('loadingPage')}</p>
-      {/* <Lottie animationData={bar} className="w-[20%] h-[30%] -mt-56" /> */}
+    <div className="w-screen h-screen flex relative">
+      <div className="flex flex-col justify-center items-center w-screen h-screen absolute bg-[#CDE3FF]">
+        <Lottie animationData={book} className="-mt-40" />
+        <p className="font-[Pretty] text-[#262f8e] text-[1.5rem] -mt-32">{t('loadingPage')}</p>
+        {/* <Lottie animationData={bar} className="w-[20%] h-[30%] -mt-56" /> */}
+      </div>
     </div>
   );
 };

@@ -108,7 +108,7 @@ const LibraryPage = () => {
                 />
               </button>
             </Link>
-            <div className="flex flex-row gap-8 font-[LM] text-[1.7rem] ml-20 relative ">
+            <div className="flex flex-row gap-8 font-[LM] text-[1.7rem]  relative ">
               <button
                 onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
                 className="flex gap-2 w-[9rem] h-[3rem] bg-[white]  pl-1 rounded-3xl font-[LM] border-[#d1d1d1] border-b-4 border-r-4 hover:scale-110"
@@ -130,7 +130,7 @@ const LibraryPage = () => {
             <div className="font-[LM] text-[60px] text-[#305eb3] ml-8 mt-12 drop-shadow-[1px_1px_0px_rgba(0,16,60,0.35)]">
               <div>{t('library')}</div>
             </div>
-            <div className="flex overflow-x-auto overflow-y-hidden m-12 gap-16 scrollbar-thumb-[#5da6ff] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#37caff] scrollbar">
+            <div className="flex overflow-x-auto overflow-y-auto m-12 gap-16">
               {books
                 .slice()
                 .reverse()

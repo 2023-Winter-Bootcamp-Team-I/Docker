@@ -48,11 +48,11 @@ function NavBar() {
                 onClick={navigateToLibraryPage}
                 className="w-[10rem] h-[3rem] bg-white rounded-[20px] border-[#d1d1d1] border-b-[5px] border-r-4 hover:scale-110"
               >
-                <p className="text-[#1D92FF] mt-2">{t('library')}</p>
+                <p className="text-[#397acf] mt-2">{t('library')}</p>
               </button>
               <button
                 onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
-                className="flex gap-2 w-[9rem] h-[3rem] bg-[white]  pl-1 rounded-3xl font-[LM] border-[#d1d1d1] border-b-4 border-r-4 hover:scale-110"
+                className="flex gap-2 w-[9rem] h-[3rem] bg-[#397acf] pl-1 text-white rounded-[20px] border-[#4071a8] font-[LM]  border-b-4 border-r-4 hover:scale-110"
               >
                 <BsTranslate className="w-[3rem] pl-3 mt-2 pt text-[#305eb3]" />
                 <p className="text-[#397acf] mt-3 text-[1.3rem]">{t('languageSelection')}</p>

@@ -99,7 +99,7 @@ function CreateInfoPage() {
   };
 
   useEffect(() => {
-    handleChange('fairyTale', 'snowWhite');
+    handleChange('fairyTale', '백설공주');
   }, []);
 
   useEffect(() => {

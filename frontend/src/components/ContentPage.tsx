@@ -30,15 +30,15 @@ const ContentPage = React.forwardRef(({ pageData }: ContentPageProps) => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col px-[2.5rem] py-8 h-[620px] 2xl:h-[650px] bg-[#93C4FF] border-[#7bb6ff] border-y-4 border-l-4 border-solid rounded-2xl">
-      <div className="flex flex-col items-center justify-around box-border px-2 w-full h-[100%] bg-white bg-opacity-60  rounded-2xl z-30">
-        <img src={pageData.image_url} className=" mt-12 h-1/2 z-30 rounded-lg" alt="content_image" />
-        <div className="box-border mt-4 h-[55%] w-[95%] bg-[#fdfdfd] bg-opacity-70 rounded-2xl z-30 pb-10 mb-10 overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
-          <div className="flex flex-col justify-center font-[Pretty] text-3xl p-8  ">
-            <div className="flex justify-end -mt-4 mb-4">
+    <div className="flex justify-center items-center flex-col px-[2.5rem] py-8 h-[620px] 2xl:h-[690px] bg-[#9dc2f3] border-[#8cb0e0] border-y-4 border-l-4 border-solid rounded-2xl">
+      <div className="flex flex-col items-center justify-around box-border px-2 w-full h-[100%] bg-white bg-opacity-65 rounded-2xl z-30">
+        <img src={pageData.image_url} className=" mt-6 h-[55%] z-30 rounded-lg" alt="content_image" />
+        <div className="box-border mt-4 h-[55%] w-[95%] relative bg-[#fdfdfd] border-4 border-[#e0e8f7] border-solid bg-opacity-70 rounded-2xl z-30 mb-6 overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
+          <div className="flex flex-col justify-center font-[Pretty] text-3xl p-8 ">
+            {bookContent}
+            <div className="flex justify-end h-8 absolute bottom-6 right-4">
               <AudioButton></AudioButton>
             </div>
-            {bookContent}
           </div>
         </div>
       </div>
