@@ -46,8 +46,12 @@ def gtts_async(tts_uuid, content, lan):
     # 변환할 텍스트 인코딩
     encText = urllib.parse.quote(content)
 
-    # 네이버 음성합성 API 요청 데이터 설정
-    data = "speaker=nshasha&volume=0&speed=0&pitch=0&format=mp3&text=" + encText
+    if lan == 'ko':
+        # 네이버 음성합성 API 요청 데이터 설정
+        data = "speaker=nshasha&volume=0&speed=0&pitch=0&format=mp3&text=" + encText
+    elif lan == 'en':
+        # 네이버 음성합성 API 요청 데이터 설정
+        data = "speaker=dara-danna&volume=0&speed=0&pitch=-3&format=mp3&text=" + encText
 
     # 네이버 음성합성 API URL
     url = "https://naveropenapi.apigw.ntruss.com/tts-premium/v1/tts"
