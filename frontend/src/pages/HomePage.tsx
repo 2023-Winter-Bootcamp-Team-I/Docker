@@ -73,7 +73,7 @@ const HomePage = () => {
             {userID ? (
               <Link to="/library">
                 <motion.button
-                  className="w-[13rem] h-[4.5rem] pb-1 pl-1 text-white bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#305eb3] border-b-8 border-r-4 hover:bg-[#4570c0] hover:scale-110"
+                  className="w-w-[12rem] h-[4rem] pb-1 pl-1 text-white bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#3f69b9] border-b-8 border-r-4 hover:bg-[#4570c0] hover:scale-110"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.7 }}
                 >
@@ -83,7 +83,7 @@ const HomePage = () => {
             ) : (
               <motion.button
                 onClick={openModal}
-                className="w-[13rem] h-[4.5rem] text-white pb-1 pl-1 bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#505050] border-b-8 border-r-4 hover:bg-[#305eb3]"
+                className="w-[12rem] h-[4rem] text-white pb-1 pl-1 bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#3f69b9] border-b-8 border-r-4 hover:bg-[#305eb3]"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.7 }}
               >
@@ -93,9 +93,9 @@ const HomePage = () => {
             {userID ? (
               <Link to="/">
                 <motion.button
-                  className=" w-[13rem] h-[4.5rem] bg-[#F1F1F1] pb-1 pl-1 text-[#305eb3] pt-2 text-[2rem] rounded-3xl border-[#d5d5d5] border-b-8 border-r-4 hover:bg-[#ffffff] hover:scale-110"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.7 }}
+                  className=" w-[12rem] h-[4rem] bg-[#f9f9f9] pb-1 pl-1 text-[#305eb3] pt-2 text-[2rem] rounded-3xl border-[#d5d5d5] border-b-8 border-r-4 hover:bg-[#ffffff]"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.5 }}
                   onClick={handleLogout}
                 >
                   {t('logout')}
@@ -104,9 +104,9 @@ const HomePage = () => {
             ) : (
               <Link to="/signup">
                 <motion.button
-                  className=" w-[13rem] h-[4.5rem] bg-[#F1F1F1] pb-1 pl-1 text-mainBlue pt-2 text-[2rem] rounded-3xl border-[#d5d5d5] border-b-8 border-r-4 hover:scale-110 hover:bg-[#ffffff]"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.7 }}
+                  className=" w-[12rem] h-[4rem] bg-[#f9f9f9] pb-1 pl-1 text-[#305eb3] pt-2 text-[2rem] rounded-3xl border-[#d5d5d5] border-b-8 border-r-4 hover:bg-[#ffffff]"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.5 }}
                 >
                   {t('signup')}
                 </motion.button>
