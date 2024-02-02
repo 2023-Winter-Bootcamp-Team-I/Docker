@@ -53,10 +53,10 @@ function NavBar() {
                 onClick={navigateToLibraryPage}
                 className="w-[10rem] h-[3rem] bg-white rounded-[20px] border-[#d1d1d1] border-b-[5px] border-r-4 hover:scale-110"
               >
-                <p className="text-[#1D92FF] mt-2">{t('library')}</p>
+                <p className="text-[#397acf] mt-2">{t('library')}</p>
               </button>
               <button
-                className="w-[10rem] h-[3rem] bg-mainBlue pt-2 pl-1 text-white rounded-[20px] border-[#4695D9] border-b-[5px] border-r-4 hover:scale-110"
+                className="w-[10rem] h-[3rem] bg-[#397acf] pt-2 pl-1 text-white rounded-[20px] border-[#4071a8] border-b-[5px] border-r-4 hover:scale-110"
                 onClick={() => openModal()}
               >
                 {t('share')}
