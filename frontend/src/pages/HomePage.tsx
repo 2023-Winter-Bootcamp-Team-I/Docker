@@ -73,7 +73,7 @@ const HomePage = () => {
             {userID ? (
               <Link to="/library">
                 <motion.button
-                  className="w-w-[12rem] h-[4rem] pb-1 pl-1 text-white bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#3f69b9] border-b-8 border-r-4 hover:bg-[#4570c0] hover:scale-110"
+                  className="w-[12rem] h-[4rem] pb-1 pl-1 text-white bg-[#397acf] pt-2 text-[1.8rem] rounded-3xl border-[#3f69b9] border-b-8 border-r-4 hover:bg-[#4570c0] hover:scale-110"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.7 }}
                 >
