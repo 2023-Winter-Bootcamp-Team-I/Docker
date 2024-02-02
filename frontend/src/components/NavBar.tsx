@@ -1,19 +1,17 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import homeicon from '@/assets/images/Library/Home Page.svg';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { userLanguage } from '@/states/atom';
-import ShareModal from './ShareModal';
+
+import { BsTranslate } from 'react-icons/bs';
 
 function NavBar() {
   const setUserLang = useSetRecoilState(userLanguage);
   const selectedLanguage = useRecoilValue(userLanguage);
   const { t } = useTranslation();
-  const [showModal, setShowModal] = useState(false); // 모달 상태 추가
-  const { book_id } = useParams();
-  const numberBookID = parseInt(book_id as string, 10);
 
   const navigate = useNavigate();
   const navigateToHomePage = () => {
@@ -28,12 +26,9 @@ function NavBar() {
     i18n.changeLanguage(selectedLanguage);
   }, [selectedLanguage, setUserLang]);
 
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
+  const handleLanguageChange = (newLanguage: string | undefined) => {
+    setUserLang(newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   return (
@@ -56,16 +51,16 @@ function NavBar() {
                 <p className="text-[#1D92FF] mt-2">{t('library')}</p>
               </button>
               <button
-                className="w-[10rem] h-[3rem] bg-mainBlue pt-2 pl-1 text-white rounded-[20px] border-[#4695D9] border-b-[5px] border-r-4 hover:scale-110"
-                onClick={() => openModal()}
+                onClick={() => handleLanguageChange(selectedLanguage === 'ko' ? 'en' : 'ko')}
+                className="flex gap-2 w-[9rem] h-[3rem] bg-[white]  pl-1 rounded-3xl font-[LM] border-[#d1d1d1] border-b-4 border-r-4 hover:scale-110"
               >
-                {t('share')}
+                <BsTranslate className="w-[3rem] pl-3 mt-2 pt text-[#305eb3]" />
+                <p className="text-[#397acf] mt-3 text-[1.3rem]">{t('languageSelection')}</p>
               </button>
             </div>
           </div>
         </div>
       </div>
-      {showModal && <ShareModal closeModal={closeModal} bookId={numberBookID} />}
     </nav>
   );
 }
