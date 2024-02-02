@@ -143,7 +143,7 @@ const LibraryPage = () => {
                     </div>
                     <div className="flex flex-row items-center justify-between px-4">
                       <button onClick={() => navigateToPage(book.book_id)}>
-                        <div className="text-[#002050] font-dongle text-[2.2rem] py-4 ">{book.title}</div>
+                        <div className="text-[#002050] font-[PR2] text-[1.5rem] py-4 ">{book.title}</div>
                       </button>
                       <div className="flex flex-row">
                         <div>

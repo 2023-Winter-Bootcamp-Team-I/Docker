@@ -48,7 +48,7 @@ const MainPage = () => {
           <div className="relative w-auto z-10 h-36">
             {bookguBookgu.split('').map((char, index) => (
               <motion.p
-                className={`text-[100px] font-normal text-white font-[HS] absolute mt-3 -ml-8 z-0`}
+                className={`text-[100px] font-normal text-white font-[LM] absolute mt-3 -ml-8 z-0`}
                 style={{
                   left: `${index * 5}rem`,
                   textShadow: '5px 5px 0px #3462BB', // 그림자 스타일
@@ -77,7 +77,7 @@ const MainPage = () => {
             >
               AI와 함께 만드는 우리 아이 동화책
             </motion.div>
-            <div className="flex gap-12 h-20 font-[Jua] font-semibold">
+            <div className="flex gap-12 h-20 font-[LM] font-semibold">
               {userID ? (
                 <Link to="/library">
                   <motion.button

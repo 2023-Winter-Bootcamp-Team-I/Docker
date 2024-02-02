@@ -63,7 +63,7 @@ function LogInModal({ closeModal }: LogInModalProps) {
           <div className="flex justify-center items-center mt-8 text-center sm:items-center sm:p-0">
             <div className="relative rounded-lg shadow-[0_8px_20px_-8px_rgba(0,0,0,0.2)] transition-all my-28 w-2/5">
               <div className="flex flex-row h-[70%]">
-                <div className="flex flex-col bg-loginBlue pt-20 basis-1/3">
+                <div className="flex flex-col bg-[#8DB4FF] pt-20 basis-1/3">
                   <div className="flex basis-2/3 justify-center">
                     <img className="mx-auto min-h-full w-2/3 scale-75" src={heartImg} alt="heart_character" />
                   </div>
@@ -71,7 +71,7 @@ function LogInModal({ closeModal }: LogInModalProps) {
                     북그북그
                   </div>
                 </div>
-                <div className="flex flex-col bg-mainColor basis-2/3 h-full">
+                <div className="flex flex-col bg-[#DAEAFF] basis-2/3 h-full">
                   <button onClick={closeModal}>
                     <img className="left-[90%] top-[4%] z-20 absolute scale-75" src={Close} alt="close_button" />
                   </button>

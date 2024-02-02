@@ -3,9 +3,13 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import mainPageImg from '@/assets/images/mainPage.png';
-// import createInfoPageImg from '@/assets/images/createInfoPage.png';
-// import createBookPageImg from '@/assets/images/createBookPage.png';
+import mainPageImg from '@/assets/images/mainPageImg.png';
+import createInfoPageImg from '@/assets/images/createInfoPage.png';
+import koreanContentPageImg from '@/assets/images/koreanContentPageImg.png';
+import englishContentPageImg from '@/assets/images/englishContentPageImg.png';
+import shareImg from '@/assets/images/shareImg.png';
+import storyChoiceImg from '@/assets/images/storyChoiceImg.png';
+import myLibraryPageImg from '@/assets/images/myLibraryPageImg.png';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -83,25 +87,25 @@ export default function AboutUsPage() {
             <div className="flex flexrow gap-x-10">
               <div className="flex items-center mt-20">
                 <TabPanel value={value} index={0}>
-                  {/* <img src={createInfoPageImg} className="h-96 w-[700px]"></img> */}
+                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                  {/* <img src={createInfoPageImg} className="h-96 w-[700px]"></img> */}
+                  <img src={createInfoPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                  {/* <img src={createBookPageImg} className="h-96 w-[700px]"></img> */}
+                  <img src={storyChoiceImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
+                  <img src={myLibraryPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={4}>
-                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
+                  <img src={koreanContentPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={5}>
-                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
+                  <img src={englishContentPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={6}>
-                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
+                  <img src={shareImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={7}>
                   <img src={mainPageImg} className="h-96 w-[700px]"></img>
@@ -184,7 +188,7 @@ export default function AboutUsPage() {
                       )}
                       <div className="align-left" onClick={() => handleChange(4)}>
                         <Tab
-                          label="목소리와 함께 책 읽기"
+                          label="오디오북으로 듣기"
                           {...a11yProps(4)}
                           style={{
                             fontSize: '1.5rem',
@@ -197,10 +201,11 @@ export default function AboutUsPage() {
                       {value === 4 && (
                         <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">책을 읽어 줄 수도 있어요!</div>
                       )}
+
                       <div className="align-left" onClick={() => handleChange(5)}>
                         <Tab
-                          label="동화책 공유"
-                          {...a11yProps(5)}
+                          label="영어로 바꿔 읽기"
+                          {...a11yProps(6)}
                           style={{
                             fontSize: '1.5rem',
                             fontWeight: 'bold',
@@ -211,13 +216,13 @@ export default function AboutUsPage() {
                       </div>
                       {value === 5 && (
                         <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
-                          친구에게 내가 만든 책을 보여주세요
+                          한국어 영어 둘 다 듣고 읽을 수 있어요!
                         </div>
                       )}
                       <div className="align-left" onClick={() => handleChange(6)}>
                         <Tab
-                          label="한/영 모두 지원"
-                          {...a11yProps(6)}
+                          label="동화책 공유"
+                          {...a11yProps(5)}
                           style={{
                             fontSize: '1.5rem',
                             fontWeight: 'bold',
@@ -228,7 +233,7 @@ export default function AboutUsPage() {
                       </div>
                       {value === 6 && (
                         <div className="text-[1.3rem] font-[PR2] mr-6 pl-10 mb-4 mt-2">
-                          한국어 영어 둘 다 듣고 읽을 수 있어요!
+                          친구에게 내가 만든 책을 보여주세요
                         </div>
                       )}
                     </Tabs>

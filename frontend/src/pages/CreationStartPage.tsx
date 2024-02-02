@@ -95,7 +95,7 @@ function CreationStartPage() {
               </div>
               <div className="flex flex-col basis-1/2 items-center align-middle mt-24 ml-20">
                 <div
-                  className="flex justify-center font-[Pretty] -mt-20 -ml-28 text-4xl w-2/3 leading-snug break-keep"
+                  className="flex justify-center font-[LM] -mt-20 -ml-28 text-4xl w-2/3 leading-snug break-keep"
                   style={{ textAlign: 'center', whiteSpace: 'pre-line' }}
                 >
                   {/* {originTitle}의 주인공이 되어 이야기를 완성시켜봐! */}
@@ -144,7 +144,7 @@ const FrontCover = React.forwardRef(() => {
     <div className="flex h-full pb-6">
       <div className="flex bg-bookCoverBack h-full w-full rounded-3xl">
         <div className="flex flex-col bg-bookCoverFront h-full w-full mt-5 z-20 -ml-6 mr-6 rounded-3xl items-center">
-          <div className="flex bg-bookCoverTextBox h-[25%] w-4/5 rounded-3xl border-2 border-shadowGray border-solid font-[Pretty] mt-16 text-[5rem] items-center justify-center">
+          <div className="flex bg-bookCoverTextBox h-[25%] w-4/5 rounded-3xl border-2 border-shadowGray border-solid font-[LM] mt-16 text-[5rem] items-center justify-center">
             <div className="p-10 break-keep text-titleColor align-bottom">{originTitle}</div>
           </div>
           <div className="bg-bookCoverLine mt-48 h-1/5 w-full"></div>
