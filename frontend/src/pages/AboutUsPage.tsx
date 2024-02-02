@@ -87,28 +87,28 @@ export default function AboutUsPage() {
             <div className="flex flexrow gap-x-10">
               <div className="flex items-center mt-20">
                 <TabPanel value={value} index={0}>
-                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
+                  <img src={mainPageImg} className="h-96 w-[700px] border border-gray-300 shadow-lg"></img>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                  <img src={createInfoPageImg} className="h-96 w-[700px]"></img>
+                  <img src={createInfoPageImg} className="h-96 w-[700px] border border-gray-300 shadow-lg"></img>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                  <img src={storyChoiceImg} className="h-96 w-[700px]"></img>
+                  <img src={storyChoiceImg} className="h-96 w-[700px] border border-gray-300 shadow-lg"></img>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                  <img src={myLibraryPageImg} className="h-96 w-[700px]"></img>
+                  <img src={myLibraryPageImg} className="h-96 w-[700px] border border-gray-300 shadow-lg"></img>
                 </TabPanel>
                 <TabPanel value={value} index={4}>
-                  <img src={koreanContentPageImg} className="h-96 w-[700px]"></img>
+                  <img src={koreanContentPageImg} className="h-96 w-[700px] border border-gray-300 shadow-lg"></img>
                 </TabPanel>
                 <TabPanel value={value} index={5}>
-                  <img src={englishContentPageImg} className="h-96 w-[700px]"></img>
+                  <img src={englishContentPageImg} className="h-96 w-[700px] border border-gray-300 shadow-lg"></img>
                 </TabPanel>
                 <TabPanel value={value} index={6}>
-                  <img src={shareImg} className="h-96 w-[700px]"></img>
+                  <img src={shareImg} className="h-96 w-[700px] border border-gray-300 shadow-lg"></img>
                 </TabPanel>
                 <TabPanel value={value} index={7}>
-                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
+                  <img src={mainPageImg} className="h-96 w-[700px] border border-gray-300 shadow-lg"></img>
                 </TabPanel>
               </div>
               <div className="flex flex-col gap-y-10 w-[400px]">
