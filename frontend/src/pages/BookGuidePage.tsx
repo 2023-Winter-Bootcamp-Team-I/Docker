@@ -18,13 +18,13 @@ export default function BookGuidePage() {
         <div className="bg-white mb-12 bg-opacity-30 mt-16 w-[50rem] rounded-3xl p-12 flex flex-col">
           <div className="flex  justify-center items-center gap-4 -ml-8">
             {/* <img src={heart} className="flex w-24 -mt-4" />/ */}
-            <div className="font-[jua] text-[#000000] text-[2.5rem] mb-6">
+            <div className="font-[LM] text-[#000000] text-[2.5rem] mb-6">
               {' '}
               {'['} 동화책 생성 가이드 {']'}
             </div>
             {/* <p className="font-[jua] text-[#010f27] text-[2rem]">동화책 생성 가이드</p> */}
           </div>
-          <div className="flex flex-col  justify-center items-center font-[Jua]">
+          <div className="flex flex-col  justify-center items-center font-[LM]">
             <div className="flex flex-col text-3xl gap-6 text-start my-8">
               <div className="flex gap-4 items-center">
                 <img src={heart} className="flex w-12" />

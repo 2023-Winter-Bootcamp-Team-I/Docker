@@ -194,14 +194,14 @@ const StoryChoiceModal = () => {
                   animate={{ opacity: 1, y: 0 }} // 애니메이션 적용 상태
                   transition={{ duration: 0.5 }} // 애니메이션 지속 시간
                 >
-                  <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-bold font-[Pretty] flex justify-center pt-2 text-white text-4xl overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
+                  <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-bold font-[LM] flex justify-center pt-2 text-white text-4xl overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
                     첫번째 이야기
                   </div>
                   <div
                     onClick={() => {
                       choiceStory(1);
                     }}
-                    className="flex justify-center p-8 font-[Pretty] text-[#01003B] text-3xl cursor-pointer w-[85%] h-full bg-[#ffffff] shadow-[0px_5px_4px_2px_rgba(0,0,0,0.20)] rounded-2xl z-30 border-[6px] border-solid border-[#ACD2FF] hover:border-[#5BA6FF] overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2"
+                    className="flex justify-center p-8 font-[LM] text-[#01003B] text-3xl cursor-pointer w-[85%] h-full bg-[#ffffff] shadow-[0px_5px_4px_2px_rgba(0,0,0,0.20)] rounded-2xl z-30 border-[6px] border-solid border-[#ACD2FF] hover:border-[#5BA6FF] overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2"
                   >
                     <p>{storyChoice[index] ? storyChoice[index]['content'] : ''}</p>
                   </div>
@@ -212,7 +212,7 @@ const StoryChoiceModal = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-[Pretty] flex justify-center pt-2 text-white font-bold text-4xl overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
+                  <div className="cursor-pointer w-[70%] h-[20%] p-1 bg-[#71B1FC] rounded-2xl z-20 -mb-4 font-[LM] flex justify-center pt-2 text-white font-bold text-4xl overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2">
                     두번째 이야기
                   </div>
                   <div
@@ -221,7 +221,7 @@ const StoryChoiceModal = () => {
                     }}
                     className="flex justify-center p-8 cursor-pointer w-[85%] h-full bg-[#ffffff] shadow-[0px_5px_4px_2px_rgba(0,0,0,0.20)] rounded-2xl z-30 border-[6px] border-solid border-[#ACD2FF] hover:border-[#5BA6FF] overflow-y-auto scrollbar-thumb-[#c4c5c5] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-white hover:scrollbar-thumb-[#747474] scrollbar scrollbar-w-2"
                   >
-                    <span className="font-[Pretty] text-[#01003B] text-3xl">
+                    <span className="font-[LM] text-[#01003B] text-3xl">
                       {storyChoice[index + 2] ? storyChoice[index + 2]['content'] : ''}
                     </span>
                   </div>
