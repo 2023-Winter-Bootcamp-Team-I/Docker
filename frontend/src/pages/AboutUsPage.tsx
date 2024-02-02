@@ -11,7 +11,6 @@ import shareImg from '@/assets/images/shareImg.png';
 import storyChoiceImg from '@/assets/images/storyChoiceImg.png';
 import myLibraryPageImg from '@/assets/images/myLibraryPageImg.png';
 
-
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -88,10 +87,10 @@ export default function AboutUsPage() {
             <div className="flex flexrow gap-x-10">
               <div className="flex items-center mt-20">
                 <TabPanel value={value} index={0}>
-                  {/* <img src={createInfoPageImg} className="h-96 w-[700px]"></img> */}
+                  <img src={mainPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                  {/* <img src={createInfoPageImg} className="h-96 w-[700px]"></img> */}
+                  <img src={createInfoPageImg} className="h-96 w-[700px]"></img>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                   <img src={storyChoiceImg} className="h-96 w-[700px]"></img>
